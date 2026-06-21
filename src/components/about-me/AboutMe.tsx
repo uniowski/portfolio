@@ -1,34 +1,37 @@
-import "./AboutMe.css";
-import { Tooltip, OverlayTrigger, Card } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+import { Card, OverlayTrigger, Tooltip } from "react-bootstrap";
+import type { LanguageSkill, TextSecAboutMe } from "../../types";
+import "./AboutMe.css";
 
-function AboutMe({ sectionTitle, languageSkills, textSecAboutMe }) {
+interface AboutMeProps {
+  sectionTitle: string;
+  languageSkills: LanguageSkill[];
+  textSecAboutMe: TextSecAboutMe;
+}
+
+function AboutMe({ sectionTitle, languageSkills, textSecAboutMe }: AboutMeProps) {
   const skills = () => {
-    return languageSkills.map((language, index) => {
-      return (
-        <Card className="m-3" key={index}>
-          <Accordion.Item eventKey={index}>
-            <Accordion.Header>
-              <img
-                src={`icons/${language.icon}`}
-                alt={`ikona języka programowania - ${language.name}`}
-                className="language-icon"
-              />
-              <p className="m-3 primary-font-color">{language.name}</p>
-            </Accordion.Header>
-            <Accordion.Body>
-              {language.skills.map((skill, index2) => {
-                return (
-                  <p key={index2} className="m-1 primary-font-color">
-                    {skill}
-                  </p>
-                );
-              })}
-            </Accordion.Body>
-          </Accordion.Item>
-        </Card>
-      );
-    });
+    return languageSkills.map((language, index) => (
+      <Card className="m-3" key={language.name}>
+        <Accordion.Item eventKey={`${index}`}>
+          <Accordion.Header>
+            <img
+              src={`icons/${language.icon}`}
+              alt={`ikona jezyka programowania - ${language.name}`}
+              className="language-icon"
+            />
+            <p className="m-3 primary-font-color">{language.name}</p>
+          </Accordion.Header>
+          <Accordion.Body>
+            {language.skills.map((skill) => (
+              <p key={skill} className="m-1 primary-font-color">
+                {skill}
+              </p>
+            ))}
+          </Accordion.Body>
+        </Accordion.Item>
+      </Card>
+    ));
   };
 
   const tooltip1 = (
@@ -59,14 +62,9 @@ function AboutMe({ sectionTitle, languageSkills, textSecAboutMe }) {
 
           <p className="primary-font-color">
             {textSecAboutMe.helloTxt1}
-            <span className="accent-font-color">
-              {textSecAboutMe.helloTxt2}
-            </span>{" "}
+            <span className="accent-font-color">{textSecAboutMe.helloTxt2}</span>{" "}
             {textSecAboutMe.helloTxt3}
-            <span className="accent-font-color">
-              {textSecAboutMe.helloTxt4}
-            </span>
-            .
+            <span className="accent-font-color">{textSecAboutMe.helloTxt4}</span>.
           </p>
           <p className="primary-font-color">
             {textSecAboutMe.helloTxt5}
@@ -90,20 +88,19 @@ function AboutMe({ sectionTitle, languageSkills, textSecAboutMe }) {
         <div className="picture-section">
           <img
             src="/icons/dawiduniowskiportret.png"
-            alt="Zdjęcie portretowe przedstawiające Dawida Uniowskiego"
+            alt="Zdjecie portretowe przedstawiajace Dawida Uniowskiego"
             loading="lazy"
             className="profile-picture"
           />
         </div>
 
         <div className="language-section">
-          <h2 className="my-4 primary-font-color">
-            {textSecAboutMe.mySkills}:
-          </h2>
+          <h2 className="my-4 primary-font-color">{textSecAboutMe.mySkills}:</h2>
           <Accordion defaultActiveKey="0">{skills()}</Accordion>
         </div>
       </div>
     </div>
   );
 }
+
 export default AboutMe;
