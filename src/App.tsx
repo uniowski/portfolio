@@ -1,17 +1,17 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import dbEn from "./databaseEn.json";
-import dbPl from "./databasePl.json";
+import "./App.css";
 import Layout from "./components/layout/Layout";
 import Main from "./components/main/Main";
 import ProjectDetails from "./components/project-details/ProjectDetails";
-import type { PortfolioDb } from "./types";
 
 function App() {
+  const { t, i18n } = useTranslation();
+  const db = i18n.getResourceBundle(i18n.resolvedLanguage || 'pl', 'translation');
+
   const [isThemeDark, setIsThemeDark] = useState<boolean>(true);
-  const [db, setDb] = useState<PortfolioDb>(dbPl as PortfolioDb);
 
   useEffect(() => {
     const checkDarkMode = () => {
@@ -52,10 +52,6 @@ function App() {
     document.body.classList.add(newTheme);
   };
 
-  const handleLanguageChange = (isLanguagePl: boolean) => {
-    setDb((isLanguagePl ? dbPl : dbEn) as PortfolioDb);
-  };
-
   return (
     <BrowserRouter>
       <Routes>
@@ -65,12 +61,10 @@ function App() {
             <Layout
               handleThemeChange={handleThemeChange}
               isThemeDark={isThemeDark}
-              handleLanguageChange={handleLanguageChange}
-              textSections={db.textSections}
             />
           }
         >
-          <Route index element={<Main db={db} />} />
+          <Route index element={<Main />} />
           {db.reactJsProjects.map((appData) => (
             <Route
               key={`react-${appData.id}`}

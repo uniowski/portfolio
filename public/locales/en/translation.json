@@ -122,7 +122,7 @@
       "name": "Java",
       "icon": "java.png",
       "skills": [
-        "Object-oriented programming",      
+        "Object-oriented programming",
         "Mobile app development",
         "Working with databases",
         "Creating user interfaces using Java Swing"
@@ -174,13 +174,13 @@
     "mySkills": "My skills"
   },
   "textSecContact": {
-  "mailCpMsg1":"Copy: dawid.uniowski@gmail.com",
-  "mailCpMsg2":"Copied to clipboard",
-  "form": "Form",
-  "formTxt1": "Full Name",
-  "formTxt2": "Email Address",
-  "formTxt3": "Message",
-  "formTxt4": "Your message...",
-  "formTxt5": "Send"
+    "mailCpMsg1": "Copy: dawid.uniowski@gmail.com",
+    "mailCpMsg2": "Copied to clipboard",
+    "form": "Form",
+    "formTxt1": "Full Name",
+    "formTxt2": "Email Address",
+    "formTxt3": "Message",
+    "formTxt4": "Your message...",
+    "formTxt5": "Send"
   }
 }

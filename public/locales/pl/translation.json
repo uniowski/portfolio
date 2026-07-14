@@ -135,7 +135,6 @@
         "Umiejętność współpracy z systemami CMS",
         "Tworzenie i zarządzanie tabelami baz danych",
         "Sprawne korzytsanie z operacji CRUD"
-
       ]
     },
     {
@@ -150,7 +149,7 @@
       ]
     }
   ],
-  "appBtnTxt":{
+  "appBtnTxt": {
     "tryApp": "Wypróbuj aplikację ",
     "githubRepo1": "Repozytorium ",
     "githubRepo2": " w serwisie GitHub"
@@ -161,7 +160,7 @@
     "androidProjectsText": "Projekty Android - Java",
     "contactText": "Kontakt"
   },
-  "textSecAboutMe":{
+  "textSecAboutMe": {
     "inf02text": "Administracja i eksploatacja systemów komputerowych, urządzeń peryferyjnych i lokalnych sieci komputerowych.",
     "inf03text": "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych.",
     "inf04text": "Projektowanie, programowanie i testowanie aplikacji.",
@@ -173,9 +172,9 @@
     "helloTxt5": "Programowania uczę się od 2020 roku. Kończąc technikum zdobyłem następujące kwalifikacje: ",
     "mySkills": "Moje umiejętności"
   },
-  "textSecContact":{
-    "mailCpMsg1":"Skopiuj: dawid.uniowski@gmail.com",
-    "mailCpMsg2":"Skopiowano do schowka",
+  "textSecContact": {
+    "mailCpMsg1": "Skopiuj: dawid.uniowski@gmail.com",
+    "mailCpMsg2": "Skopiowano do schowka",
     "form": "Formularz",
     "formTxt1": "Imię i nazwisko",
     "formTxt2": "Adres e-mail",

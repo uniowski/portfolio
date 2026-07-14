@@ -1,13 +1,12 @@
-import type { PortfolioDb } from "../../types";
+import { useTranslation } from 'react-i18next';
 import AboutMe from "../about-me/AboutMe";
 import Contact from "../contact-me/Contact";
 import MyProject from "../my-projects/MyProjects";
 
-interface MainProps {
-  db: PortfolioDb;
-}
+function Main() {
+  const { i18n } = useTranslation();
+  const db = i18n.getResourceBundle(i18n.resolvedLanguage || 'pl', 'translation');
 
-function Main({ db }: MainProps) {
   return (
     <>
       <AboutMe

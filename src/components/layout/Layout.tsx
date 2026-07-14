@@ -1,27 +1,29 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 import Switch from "react-switch";
 import Flag from "react-world-flags";
-import type { TextSections } from "../../types";
 import "./Layout.css";
 
 interface LayoutProps {
   handleThemeChange: () => void;
   isThemeDark: boolean;
-  handleLanguageChange: (isLanguagePl: boolean) => void;
-  textSections: TextSections;
 }
 
 function Layout({
   handleThemeChange,
   isThemeDark,
-  handleLanguageChange,
-  textSections,
 }: LayoutProps) {
+  const { t, i18n } = useTranslation();
+
   const handleChange = () => {
     handleThemeChange();
+  };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
   };
 
   const [click, setClick] = useState(false);
@@ -93,7 +95,7 @@ function Layout({
               onClick={closeMenu}
               className="primary-font-color"
             >
-              {textSections.aboutMeText}
+              {t('textSections.aboutMeText')}
             </Link>
           </li>
           <li className="nav-item">
@@ -106,7 +108,7 @@ function Layout({
               onClick={closeMenu}
               className="primary-font-color"
             >
-              {textSections.reactProjectsText}
+              {t('textSections.reactProjectsText')}
             </Link>
           </li>
           <li className="nav-item">
@@ -119,7 +121,7 @@ function Layout({
               onClick={closeMenu}
               className="primary-font-color"
             >
-              {textSections.androidProjectsText}
+              {t('textSections.androidProjectsText')}
             </Link>
           </li>
           <li className="nav-item">
@@ -132,7 +134,7 @@ function Layout({
               onClick={closeMenu}
               className="primary-font-color"
             >
-              {textSections.contactText}
+              {t('textSections.contactText')}
             </Link>
           </li>
           <li>
@@ -152,14 +154,14 @@ function Layout({
               alt="jezyk polski"
               height={32}
               width={64}
-              onClick={() => handleLanguageChange(true)}
+              onClick={() => changeLanguage('pl')}
             />
             <Flag
               code="GB"
               alt="english language"
               height={32}
               width={64}
-              onClick={() => handleLanguageChange(false)}
+              onClick={() => changeLanguage('en')}
             />
           </li>
         </ul>
