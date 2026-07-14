@@ -96,7 +96,7 @@ function AboutMe({ sectionTitle, languageSkills, textSecAboutMe }: AboutMeProps)
 
         <div className="language-section">
           <h2 className="my-4 primary-font-color">{textSecAboutMe.mySkills}:</h2>
-          <Accordion defaultActiveKey="0">{skills()}</Accordion>
+          <Accordion>{skills()}</Accordion>
         </div>
       </div>
     </div>

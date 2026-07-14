@@ -58,7 +58,7 @@ function Contact({ sectionTitle, textSecContact }: ContactProps) {
               </a>
             </div>
             <div className="col-6 mb-4">
-              <a href="https://github.com/dejvitxc9?tab=repositories" target="_blank" rel="noreferrer">
+              <a href="https://github.com/uniowski?tab=repositories" target="_blank" rel="noreferrer">
                 <div className="card">
                   <div className="card-body text-center custom-contact-card">
                     <FaGithubSquare size={30} className="primary-font-color" />

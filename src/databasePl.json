@@ -10,7 +10,7 @@
         "Na stronie dostępne są różne kategorie potraw, takie jak: desery, dania meksykańskie, dania kuchni chińskiej, czy koktaile. Każda z tych zakładaek ma swoje wyjątkowo promowane danie dnia. Pokazane przepisy można otworzyć i podejrzeć w szczegułach ich składniki oraz proces wykonania. Interesującą funkcjonalnością jest poziom trudności wyświetlany poniżej nazwy każdej potrawy, wraz z odpowiadającym mu kolorem."
       ],
       "simulationLink": "https://tastydejvit.netlify.app",
-      "gitHubLink": "https://github.com/dejvitxc9/tastydejvit"
+      "gitHubLink": "https://github.com/uniowski/tastydejvit"
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
         "Frontend został wykonany przy użyciu React Js, w tworzeniu strony wizualnej wspierałem się Bootstrapem. Backend został opraty na platformie Firebase"
       ],
       "simulationLink": "https://buvi.netlify.app",
-      "gitHubLink": "https://github.com/dejvitxc9/buvishop"
+      "gitHubLink": "https://github.com/uniowski/buvishop"
     },
     {
       "id": 3,
@@ -38,7 +38,7 @@
         "Dodałem opcje komentowania filmów dodanych przez innych użytkowników."
       ],
       "simulationLink": "https://alfred-web.netlify.app",
-      "gitHubLink": "https://github.com/dejvitxc9/alfredweb"
+      "gitHubLink": "https://github.com/uniowski/alfredweb"
     }
   ],
   "androidProjects": [
