@@ -1,0 +1,186 @@
+{
+  "reactJsProjects": [
+    {
+      "id": 1,
+      "name": "TastyDejvit.com",
+      "imageLink": "web1.jpg",
+      "description": [
+        "Strona z przepisamy TastyDejvit.com została stworzona przy uzyciu 5 API dostarzanych przez RapidApi",
+        "Projekt ten prezentuje moje umiejętności w posługiwaniu się interfejsem API.",
+        "Na stronie dostępne są różne kategorie potraw, takie jak: desery, dania meksykańskie, dania kuchni chińskiej, czy koktaile. Każda z tych zakładaek ma swoje wyjątkowo promowane danie dnia. Pokazane przepisy można otworzyć i podejrzeć w szczegułach ich składniki oraz proces wykonania. Interesującą funkcjonalnością jest poziom trudności wyświetlany poniżej nazwy każdej potrawy, wraz z odpowiadającym mu kolorem."
+      ],
+      "simulationLink": "https://tastydejvit.netlify.app",
+      "gitHubLink": "https://github.com/uniowski/tastydejvit"
+    },
+    {
+      "id": 2,
+      "name": "Buvi",
+      "imageLink": "web2.jpg",
+      "description": [
+        "Buvi to mój autorski projekt sklepu internetowego z butami.",
+        "Na stronie Buvi udało mi się zaprojektować i zaimplementować system kont użytkowników. Użytkownik może zarejestrować swoje konto o randze Klient oraz Administrator. ",
+        "Konto rangi Klient jest uprawnione do przeglądania sklepu, dodawania zakupów do koszyka oraz jego edycji.",
+        "Konto rangi Administrator podczas tworzenia jest zabezpieczone kodem dostępu, na koncie Administrator nie można robić zakupów, natomiast jest uprawnione do dodawania butów do oferty sklepu oraz ich usuwania.",
+        "Na podstronie 'Zaloguj' znajdują się przykładowe konta demonstracyjne.",
+        "Frontend został wykonany przy użyciu React Js, w tworzeniu strony wizualnej wspierałem się Bootstrapem. Backend został opraty na platformie Firebase"
+      ],
+      "simulationLink": "https://buvi.netlify.app",
+      "gitHubLink": "https://github.com/uniowski/buvishop"
+    },
+    {
+      "id": 3,
+      "name": "AlfredWeb",
+      "imageLink": "web3.jpg",
+      "description": [
+        "Strona AlfredWeb powstała na podobieństwo polskiego serwisu Filmweb. Na stronie dodałem w pełni działający system zarządzania listą filmów.",
+        "W trakcie dodawania filmu, należy wgrać plakat do filmu",
+        "Baza danych strony oparta jest o Firebase od Google",
+        "Dodałem opcje komentowania filmów dodanych przez innych użytkowników."
+      ],
+      "simulationLink": "https://alfred-web.netlify.app",
+      "gitHubLink": "https://github.com/uniowski/alfredweb"
+    }
+  ],
+  "androidProjects": [
+    {
+      "id": 1,
+      "name": "TicTakToe",
+      "imageLink": "and1.jpg",
+      "description": [
+        "Gra TikTakToe to jedno z moich osiągnieć w programowaniu w języku Java. TikTakToe to klasyczna gra w kółko i krzyżyk, która została zaprojektowana i zaimplementowana przy użyciu języka programowania Java oraz XML.",
+        "Gra ma zarówno tryb dwuosobowy jak i jednoosobowy. W trybie dwuosobowym grcze grają turami a aktualną kolejność wskazazana jest u góry ekranu. Tryb gry z komputerem można włączyć klikając na nazwę Player 2",
+        "W aplikacji wykorzystałem RecyclerView.Adapter do wyświetlania planszy rozgrywki."
+      ],
+      "simulationLink": "",
+      "gitHubLink": ""
+    },
+    {
+      "id": 2,
+      "name": "WordMaster",
+      "imageLink": "and2.jpg",
+      "description": [
+        "Aplikacja WordMaster to wszechstronne narzędzie do nauki języków obcych, które zapewnia skuteczny sposób na opanowanie nowych słówek i wyrażeń. Ta zaawansowana aplikacja oferuje użytkownikom wiele funkcji, które ułatwiają proces nauki i zapewniają pełną kontrolę nad słownictwem.",
+        "Główne funkcje aplikacji WordMaster to:",
+        "Różne rodzaje testów: WordMaster oferuje trzy rodzaje testów do nauki słówek - testy utrwalające, testy działowe i testy z najmniej poznanych słówek. Dzięki nim możesz dostosować proces nauki do swoich potrzeb i preferencji.",
+        "Dodawanie ręczne słówek: Możesz dodawać nowe słówka do bazy danych ręcznie. To idealne rozwiązanie, gdy chcesz uczyć się słówek już w trakcie dodawania.",
+        "Pełne zarządzanie słówkami: WordMaster umożliwia pełne zarządzanie słówkami z poziomu aplikacji. Możesz usuwać, edytować, zmieniać kategorie i inne parametry słówek, co pozwala dostosować je do własnych potrzeb.",
+        "Opcja nauki z pogrupowanymi kategoriami: Aplikacja wyświetla słówka pogrupowane według kategorii, co ułatwia naukę i organizację materiałów.",
+        "Import i eksport słówek: WordMaster umożliwia import i eksport słówek z wykorzystaniem plików tekstowych (TXT). Możesz edytować słownictwo na komputerze i przenosić je z powrotem do aplikacji oraz dzielić się słówkami z znajomymi."
+      ],
+      "simulationLink": "",
+      "gitHubLink": ""
+    },
+    {
+      "id": 3,
+      "name": "SkaniX",
+      "imageLink": "and3.jpg",
+      "description": [
+        "Aplikacja SkaniX to rozwiązanie, które ułatwia życie każdemu, kto korzysta z kart i kodów lojalnościowych. Ile razy zdarzyło Ci się, że aplikacja zniżkowa w sieciówkach nie zadziałała lub konto było wylogowane? To już nie problem! Rozwiązaniem jest aplikacja SkaniX, dzięki której możesz trzymać wszystkie swoje karty lojalnościowe w jednym miejscu. SkaniX to wygodne i intuicyjne narzędzie do zarządzania programami partnerskimi oraz kartami lojalnościowymi.",
+        "Główne funkcje aplikacji SkaniX to:",
+        "Dodawanie i zarządzanie kartami lojalnościowymi: Aplikacja umożliwia łatwe dodawanie nowych kart poprzez zrzuty ekranu, edycję istniejących oraz usuwanie tych już nie potrzebnych",
+        "Przechowywanie w bazie danych: SkaniX zapisuje zdjęcia w podfolderze ze zdjęciami i przechowuje do nich ścieżki w bazie Danych SQLite.",
+        "Wbudowane przycinanie zdjęć: Aplikacja posiada wbudowaną bibliotekę do przycinania zdjęć, co jest szczególnie przydatne w przypadku kart lojalnościowych w formie zdjęć bądź zrzutów z ekranu, umożliwiając dostosowanie ich rozmiaru i kadrowanie do potrzeb użytkownika.",
+        "Aplikacja SkaniX to praktyczne narzędzie, które pomaga w organizacji i efektywnym zarządzaniu kartami lojalnościowymi. Dzięki niej nie tylko oszczędzasz czas, ale także unikasz zgubienia kart, jak również i poprawisz wygodę."
+      ],
+      "simulationLink": "",
+      "gitHubLink": ""
+    }
+  ],
+  "languageSkills": [
+    {
+      "name": "React JS",
+      "icon": "react.png",
+      "skills": [
+        "Tworzenie interaktywnych komponentów UI",
+        "Zarządzanie stanem aplikacji",
+        "Implementowanie routowania",
+        "Korzystanie z interfejsu API",
+        "Używanie bibliotek takich jak React Router oraz React Bootstrap",
+        "Wdrażanie aplikacji React do produkcji"
+      ]
+    },
+    {
+      "name": "Redux",
+      "icon": "redux.png",
+      "skills": [
+        "Zarządzanie stanem aplikacji za pomocą Reduxa i Redux Toolkit",
+        "Tworzenie akcji, reducerów i store do centralizacji stanu",
+        "Integracja Reduxa z Reactem za pomocą react-redux"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "icon": "js.png",
+      "skills": [
+        "Manipulowanie DOM",
+        "Obsługa zdarzeń",
+        "Tworzenie animacji i interakcji",
+        "Testowanie i debugowanie kodu JavaScript"
+      ]
+    },
+    {
+      "name": "Java",
+      "icon": "java.png",
+      "skills": [
+        "Programowanie obiektowe, aplikacji mobilnych",
+        "Praca z bazami danych",
+        "Tworzenie interfejsów użytkownika w Java Swing"
+      ]
+    },
+    {
+      "name": "PHP",
+      "icon": "php.png",
+      "skills": [
+        "Praca z bazami danych MySQL, Apache",
+        "Umiejętność współpracy z systemami CMS",
+        "Tworzenie i zarządzanie tabelami baz danych",
+        "Sprawne korzytsanie z operacji CRUD"
+
+      ]
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "bootstrap.png",
+      "skills": [
+        "Tworzenie responsywnych UI",
+        "Korzystanie z siatki Bootstrap",
+        "Korzystanie z komponentów Bootstrap",
+        "Dostosowywanie Bootstrapa do własnych potrzeb",
+        "Doświadczenie z Bootstrapem w wersji 5"
+      ]
+    }
+  ],
+  "appBtnTxt":{
+    "tryApp": "Wypróbuj aplikację ",
+    "githubRepo1": "Repozytorium ",
+    "githubRepo2": " w serwisie GitHub"
+  },
+  "textSections": {
+    "aboutMeText": "O mnie",
+    "reactProjectsText": "Projekty React JS",
+    "androidProjectsText": "Projekty Android - Java",
+    "contactText": "Kontakt"
+  },
+  "textSecAboutMe":{
+    "inf02text": "Administracja i eksploatacja systemów komputerowych, urządzeń peryferyjnych i lokalnych sieci komputerowych.",
+    "inf03text": "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych.",
+    "inf04text": "Projektowanie, programowanie i testowanie aplikacji.",
+    "myNameis": "Nazywam się ",
+    "helloTxt1": "Jestem ",
+    "helloTxt2": "Technikiem Programistą",
+    "helloTxt3": "oraz ",
+    "helloTxt4": "Technikiem Informatykiem",
+    "helloTxt5": "Programowania uczę się od 2020 roku. Kończąc technikum zdobyłem następujące kwalifikacje: ",
+    "mySkills": "Moje umiejętności"
+  },
+  "textSecContact":{
+    "mailCpMsg1":"Skopiuj: dawid.uniowski@gmail.com",
+    "mailCpMsg2":"Skopiowano do schowka",
+    "form": "Formularz",
+    "formTxt1": "Imię i nazwisko",
+    "formTxt2": "Adres e-mail",
+    "formTxt3": "Wiadomość",
+    "formTxt4": "Wiadomość...",
+    "formTxt5": "Wyślij"
+  }
+}
