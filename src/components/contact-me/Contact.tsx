@@ -1,16 +1,22 @@
-import "./Contact.css";
+import { useState } from "react";
+import { AiFillInstagram, AiFillPhone } from "react-icons/ai";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
-import { FaGithubSquare, FaCheck } from "react-icons/fa";
-import { AiFillInstagram, AiFillPhone } from "react-icons/ai";
+import { FaCheck, FaGithubSquare } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
-import { useState } from "react";
+import type { TextSecContact } from "../../types";
+import "./Contact.css";
 
-function Contact({ sectionTitle, textSecContact }) {
-  const [contactActionIcon, setContactActionIcon] = useState(
+interface ContactProps {
+  sectionTitle: string;
+  textSecContact: TextSecContact;
+}
+
+function Contact({ sectionTitle, textSecContact }: ContactProps) {
+  const [contactActionIcon, setContactActionIcon] = useState<JSX.Element>(
     <BiLogoGmail size={30} className="primary-font-color" />
   );
-  const [contactEmailAdress, setContactEmailAdress] = useState(
+  const [contactEmailAddress, setContactEmailAddress] = useState<string>(
     "dawid.uniowski@gmail.com"
   );
 
@@ -21,11 +27,7 @@ function Contact({ sectionTitle, textSecContact }) {
           <h2 className="primary-font-color">{sectionTitle}</h2>
           <div className="row">
             <div className="col-6 mb-4">
-              <a
-                href="https://www.facebook.com/dawid.uniowski/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://www.facebook.com/dawid.uniowski/" target="_blank" rel="noreferrer">
                 <div className="card">
                   <div className="card-body text-center custom-contact-card">
                     <BsFacebook size={30} className="primary-font-color" />
@@ -34,11 +36,7 @@ function Contact({ sectionTitle, textSecContact }) {
               </a>
             </div>
             <div className="col-6 mb-4">
-              <a
-                href="https://www.instagram.com/dejvit_ok/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://www.instagram.com/dejvit_ok/" target="_blank" rel="noreferrer">
                 <div className="card">
                   <div className="card-body text-center custom-contact-card">
                     <AiFillInstagram size={30} className="primary-font-color" />
@@ -60,11 +58,7 @@ function Contact({ sectionTitle, textSecContact }) {
               </a>
             </div>
             <div className="col-6 mb-4">
-              <a
-                href="https://github.com/dejvitxc9?tab=repositories"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/uniowski?tab=repositories" target="_blank" rel="noreferrer">
                 <div className="card">
                   <div className="card-body text-center custom-contact-card">
                     <FaGithubSquare size={30} className="primary-font-color" />
@@ -79,29 +73,21 @@ function Contact({ sectionTitle, textSecContact }) {
                   navigator.clipboard.writeText("dawid.uniowski@gmail.com");
                 }}
                 onMouseEnter={() => {
-                  setContactActionIcon(
-                    <MdContentCopy size={30} className="primary-font-color" />
-                  );
-                  setContactEmailAdress(textSecContact.mailCpMsg1);
+                  setContactActionIcon(<MdContentCopy size={30} className="primary-font-color" />);
+                  setContactEmailAddress(textSecContact.mailCpMsg1);
                 }}
                 onMouseLeave={() => {
-                  setContactActionIcon(
-                    <BiLogoGmail size={30} className="primary-font-color" />
-                  );
-                  setContactEmailAdress("dawid.uniowski@gmail.com");
+                  setContactActionIcon(<BiLogoGmail size={30} className="primary-font-color" />);
+                  setContactEmailAddress("dawid.uniowski@gmail.com");
                 }}
                 onMouseDownCapture={() => {
-                  setContactActionIcon(
-                    <FaCheck size={30} className="primary-font-color" />
-                  );
-                  setContactEmailAdress(textSecContact.mailCpMsg2);
+                  setContactActionIcon(<FaCheck size={30} className="primary-font-color" />);
+                  setContactEmailAddress(textSecContact.mailCpMsg2);
                 }}
               >
                 <div className="card-body text-center custom-contact-card">
                   {contactActionIcon}
-                  <p className="m-0 primary-font-color link">
-                    {contactEmailAdress}
-                  </p>
+                  <p className="m-0 primary-font-color link">{contactEmailAddress}</p>
                 </div>
               </div>
             </div>
@@ -144,10 +130,7 @@ function Contact({ sectionTitle, textSecContact }) {
                 className="form-control"
                 required
               />
-              <label
-                htmlFor="message"
-                className="form-label primary-font-color"
-              >
+              <label htmlFor="message" className="form-label primary-font-color">
                 {textSecContact.formTxt3}
               </label>
               <textarea

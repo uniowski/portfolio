@@ -1,8 +1,13 @@
+import type { PortfolioDb } from "../../types";
 import AboutMe from "../about-me/AboutMe";
-import MyProject from "../my-projects/MyProjects";
 import Contact from "../contact-me/Contact";
+import MyProject from "../my-projects/MyProjects";
 
-function Main({ db }) {
+interface MainProps {
+  db: PortfolioDb;
+}
+
+function Main({ db }: MainProps) {
   return (
     <>
       <AboutMe
@@ -13,20 +18,16 @@ function Main({ db }) {
       <MyProject
         sectionTitle={db.textSections.reactProjectsText}
         itemList={db.reactJsProjects}
-        pointer={"projects-react-js"}
-        className={"projects-section-first"}
+        pointer="projects-react-js"
       />
       <MyProject
         sectionTitle={db.textSections.androidProjectsText}
         itemList={db.androidProjects}
-        pointer={"projects-android"}
-        className={"projects-section-first"}
+        pointer="projects-android"
       />
-      <Contact
-        sectionTitle={db.textSections.contactText}
-        textSecContact={db.textSecContact}
-      />
+      <Contact sectionTitle={db.textSections.contactText} textSecContact={db.textSecContact} />
     </>
   );
 }
+
 export default Main;

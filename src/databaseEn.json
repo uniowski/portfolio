@@ -10,7 +10,7 @@
         "The site offers various categories of dishes such as: desserts, Mexican dishes, Chinese cuisine, and cocktails. Each of these categories has its own featured dish of the day. The displayed recipes can be opened to view detailed ingredients and preparation instructions. An interesting feature is the difficulty level displayed below the name of each dish, along with a corresponding color."
       ],
       "simulationLink": "https://tastydejvit.netlify.app",
-      "gitHubLink": "https://github.com/dejvitxc9/tastydejvit"
+      "gitHubLink": "https://github.com/uniowski/tastydejvit"
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
         "The frontend was built using React JS, and for visual design, I used Bootstrap. The backend is based on the Firebase platform."
       ],
       "simulationLink": "https://buvi.netlify.app",
-      "gitHubLink": "https://github.com/dejvitxc9/buvishop"
+      "gitHubLink": "https://github.com/uniowski/buvishop"
     },
     {
       "id": 3,
@@ -38,7 +38,7 @@
         "I added a feature to comment on movies added by other users."
       ],
       "simulationLink": "https://alfred-web.netlify.app",
-      "gitHubLink": "https://github.com/dejvitxc9/alfredweb"
+      "gitHubLink": "https://github.com/uniowski/alfredweb"
     }
   ],
   "androidProjects": [

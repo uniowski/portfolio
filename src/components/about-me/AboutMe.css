@@ -21,7 +21,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-image: url(/public/files/ambientShapes.svg);
+  background-image: url(/files/ambientShapes.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }

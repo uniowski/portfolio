@@ -1,31 +1,38 @@
-import "./Layout.css";
-import Switch from "react-switch";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import Switch from "react-switch";
 import Flag from "react-world-flags";
+import type { TextSections } from "../../types";
+import "./Layout.css";
+
+interface LayoutProps {
+  handleThemeChange: () => void;
+  isThemeDark: boolean;
+  handleLanguageChange: (isLanguagePl: boolean) => void;
+  textSections: TextSections;
+}
 
 function Layout({
   handleThemeChange,
   isThemeDark,
   handleLanguageChange,
   textSections,
-}) {
-  const handleChange = (checked) => {
-    if (checked) {
-      handleThemeChange("dark-theme");
-    } else {
-      handleThemeChange("light-theme");
-    }
+}: LayoutProps) {
+  const handleChange = () => {
+    handleThemeChange();
   };
 
   const [click, setClick] = useState(false);
+
   const handleClick = () => {
-    setClick(!click);
+    setClick((prev) => !prev);
   };
+
   const location = useLocation();
   const navigate = useNavigate();
+
   const closeMenu = () => {
     setClick(false);
     if (location.pathname !== "/") {
@@ -40,19 +47,19 @@ function Layout({
       return (
         <img
           className="image-fluid logo"
-          src={"./icons/new-dawid-uniowski-logo-dark.png"}
+          src="/icons/new-dawid-uniowski-logo-dark.png"
           alt="logo Dawid Uniowski - dark"
         />
       );
-    } else {
-      return (
-        <img
-          className="image-fluid logo"
-          src={"./icons/new-dawid-uniowski-logo-light.png"}
-          alt="logo Dawid Uniowski - light"
-        />
-      );
     }
+
+    return (
+      <img
+        className="image-fluid logo"
+        src="/icons/new-dawid-uniowski-logo-light.png"
+        alt="logo Dawid Uniowski - light"
+      />
+    );
   };
 
   return (
@@ -77,7 +84,6 @@ function Layout({
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            {/* <a href="/" onClick={closeMenu}> */}
             <Link
               to="o-mnie"
               spy={true}
@@ -134,22 +140,8 @@ function Layout({
               className="theme-switch"
               onChange={handleChange}
               checked={isThemeDark}
-              checkedIcon={
-                <img
-                  src="/icons/dark-theme.png"
-                  alt="dark mode"
-                  height={28}
-                  width={28}
-                />
-              }
-              uncheckedIcon={
-                <img
-                  src="/icons/light-theme.png"
-                  alt="light mode"
-                  height={28}
-                  width={28}
-                />
-              }
+              checkedIcon={<img src="/icons/dark-theme.png" alt="dark mode" height={28} width={28} />}
+              uncheckedIcon={<img src="/icons/light-theme.png" alt="light mode" height={28} width={28} />}
               onColor="#222222"
               offColor="#c4c4c4"
             />
@@ -178,4 +170,5 @@ function Layout({
     </div>
   );
 }
+
 export default Layout;
