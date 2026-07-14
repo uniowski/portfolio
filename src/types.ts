@@ -1,5 +1,4 @@
 export interface ProjectItem {
-  id: number;
   name: string;
   imageLink: string;
   description: string[];

@@ -1,7 +1,6 @@
 {
   "reactJsProjects": [
     {
-      "id": 1,
       "name": "TastyDejvit.com",
       "imageLink": "web1.jpg",
       "description": [
@@ -13,7 +12,6 @@
       "gitHubLink": "https://github.com/uniowski/tastydejvit"
     },
     {
-      "id": 2,
       "name": "Buvi",
       "imageLink": "web2.jpg",
       "description": [
@@ -28,7 +26,6 @@
       "gitHubLink": "https://github.com/uniowski/buvishop"
     },
     {
-      "id": 3,
       "name": "AlfredWeb",
       "imageLink": "web3.jpg",
       "description": [
@@ -43,7 +40,6 @@
   ],
   "androidProjects": [
     {
-      "id": 1,
       "name": "TicTakToe",
       "imageLink": "and1.jpg",
       "description": [
@@ -55,7 +51,6 @@
       "gitHubLink": ""
     },
     {
-      "id": 2,
       "name": "WordMaster",
       "imageLink": "and2.jpg",
       "description": [
@@ -71,7 +66,6 @@
       "gitHubLink": ""
     },
     {
-      "id": 3,
       "name": "SkaniX",
       "imageLink": "and3.jpg",
       "description": [

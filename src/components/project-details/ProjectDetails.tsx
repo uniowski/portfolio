@@ -1,20 +1,22 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { FaGithubSquare } from "react-icons/fa";
-import type { AppBtnText, ProjectItem } from "../../types";
+import type { ProjectItem } from "../../types";
 import "./ProjectDetails.css";
 
 interface ProjectDetailsProps {
   appData: ProjectItem;
-  appBtnTxt: AppBtnText;
 }
 
-function ProjectDetails({ appData, appBtnTxt }: ProjectDetailsProps) {
+function ProjectDetails({ appData }: ProjectDetailsProps) {
   useEffect(() => {
     window.scroll({
       top: 0,
       behavior: "smooth",
     });
   }, []);
+
+  const { t } = useTranslation();
 
   const tryMyApp = () => {
     window.open(appData.simulationLink, "_blank");
@@ -36,14 +38,14 @@ function ProjectDetails({ appData, appBtnTxt }: ProjectDetailsProps) {
           ))}
           {appData.simulationLink ? (
             <button className="btn btn-info primary-font-color" onClick={tryMyApp}>
-              {`${appBtnTxt.tryApp} ${appData.name}`}
+              {`${t('appBtnTxt.tryApp')} ${appData.name}`}
             </button>
           ) : null}
           <br />
           {appData.gitHubLink ? (
             <button className="btn btn-info primary-font-color" onClick={gitHubApp}>
               <FaGithubSquare size={30} />
-              {`${appBtnTxt.githubRepo1} ${appData.name} ${appBtnTxt.githubRepo2}`}
+              {`${t('appBtnTxt.githubRepo1')} ${appData.name} ${t('appBtnTxt.githubRepo2')}`}
             </button>
           ) : null}
         </div>

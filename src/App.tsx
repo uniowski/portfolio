@@ -6,10 +6,12 @@ import "./App.css";
 import Layout from "./components/layout/Layout";
 import Main from "./components/main/Main";
 import ProjectDetails from "./components/project-details/ProjectDetails";
+import { ProjectItem } from "./types";
 
 function App() {
-  const { t, i18n } = useTranslation();
-  const db = i18n.getResourceBundle(i18n.resolvedLanguage || 'pl', 'translation');
+  const { t } = useTranslation();
+  const reactJsProjects = t('reactJsProjects', { returnObjects: true }) as ProjectItem[];
+  const androidProjects = t('androidProjects', { returnObjects: true }) as ProjectItem[];
 
   const [isThemeDark, setIsThemeDark] = useState<boolean>(true);
 
@@ -65,18 +67,18 @@ function App() {
           }
         >
           <Route index element={<Main />} />
-          {db.reactJsProjects.map((appData) => (
+          {reactJsProjects.map((appData) => (
             <Route
-              key={`react-${appData.id}`}
+              key={`react-${appData.name}`}
               path={appData.name}
-              element={<ProjectDetails appData={appData} appBtnTxt={db.appBtnTxt} />}
+              element={<ProjectDetails appData={appData} />}
             />
           ))}
-          {db.androidProjects.map((appData) => (
+          {androidProjects.map((appData) => (
             <Route
-              key={`android-${appData.id}`}
+              key={`android-${appData.name}`}
               path={appData.name}
-              element={<ProjectDetails appData={appData} appBtnTxt={db.appBtnTxt} />}
+              element={<ProjectDetails appData={appData} />}
             />
           ))}
         </Route>

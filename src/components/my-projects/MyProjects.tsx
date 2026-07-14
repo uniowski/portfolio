@@ -14,7 +14,7 @@ function MyProject({ sectionTitle, itemList, pointer }: MyProjectProps) {
       <h2 className="primary-font-color">{sectionTitle}</h2>
       <div className="grid-projects">
         {itemList.map((item) => (
-          <Tile key={item.id} item={item} />
+          <Tile key={item.name} item={item} />
         ))}
       </div>
     </div>
