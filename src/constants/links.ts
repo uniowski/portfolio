@@ -5,19 +5,19 @@ export const SOCIAL_LINKS = {
   email: "dawid.uniowski@gmail.com",
   facebook: "https://www.facebook.com/dawid.uniowski/",
   instagram: "https://www.instagram.com/dejvit_ok/",
-  phone: "+48 793 070 996"
+  phone: "+48 793 070 996",
 } as const;
 
 export const APPS_LINKS = {
-  tastyDejvit: {
+  "TastyDejvit.com": {
     deployLink: "https://tastydejvit.netlify.app",
-    trepoLink: "https://github.com/uniowski/tastydejvit",
+    repoLink: "https://github.com/uniowski/tastydejvit",
   },
-  buvi: {
+  "Buvi": {
     deployLink: "https://buvi.netlify.app",
     repoLink: "https://github.com/uniowski/buvishop",
   },
-  alfredWeb: {
+  "AlfredWeb": {
     deployLink: "https://alfred-web.netlify.app",
     repoLink: "https://github.com/uniowski/alfredweb",
   },

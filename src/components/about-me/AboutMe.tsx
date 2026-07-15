@@ -1,13 +1,13 @@
 import { Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import type { LanguageSkill } from "../../types";
 import "./AboutMe.css";
 
 function AboutMe() {
   const { t } = useTranslation();
 
-  const languageSkills = t('languageSkills', { returnObjects: true }) as LanguageSkill[];
+  const languageSkills = t("skills", { returnObjects: true }) as LanguageSkill[];
 
   const skills = () => {
     return languageSkills.map((language, index) => (
@@ -35,38 +35,38 @@ function AboutMe() {
 
   const tooltip1 = (
     <Tooltip id="tooltip">
-      <strong>INF.02</strong> {t("textSecAboutMe.inf02text")}
+      <strong>INF.02</strong> {t("aboutMe.content.qualificationInf02")}
     </Tooltip>
   );
   const tooltip2 = (
     <Tooltip id="tooltip">
-      <strong>INF.03</strong> {t("textSecAboutMe.inf03text")}
+      <strong>INF.03</strong> {t("aboutMe.content.qualificationInf03")}
     </Tooltip>
   );
   const tooltip3 = (
     <Tooltip id="tooltip">
-      <strong>INF.04</strong> {t("textSecAboutMe.inf04text")}
+      <strong>INF.04</strong> {t("aboutMe.content.qualificationInf04")}
     </Tooltip>
   );
 
   return (
     <div className="about-me" id="o-mnie">
-      <h2 className="primary-font-color">{t("textSections.aboutMeText")}</h2>
+      <h2 className="primary-font-color">{t("navigation.sections.aboutMe")}</h2>
       <div className="cv-container">
         <div className="name-section">
           <h1 className="primary-font-color name-line">
-            {t("textSecAboutMe.myNameis")}
+            {t("aboutMe.content.myNameIs")}
             <span className="accent-font-color no-wrap">Dawid Uniowski</span>
           </h1>
 
           <p className="primary-font-color">
-            {t("textSecAboutMe.helloTxt1")}
-            <span className="accent-font-color">{t("textSecAboutMe.helloTxt2")}</span>{" "}
-            {t("textSecAboutMe.helloTxt3")}
-            <span className="accent-font-color">{t("textSecAboutMe.helloTxt4")}</span>.
+            {t("aboutMe.content.iAm")}
+            <span className="accent-font-color">{t("aboutMe.content.jobTitle")}</span>{" "}
+            {t("aboutMe.content.and")}
+            <span className="accent-font-color">{t("aboutMe.content.secondaryRole")}</span>.
           </p>
           <p className="primary-font-color">
-            {t("textSecAboutMe.helloTxt5")}
+            {t("aboutMe.content.learningIntro")}
             <span className="no-wrap primary-font-color">
               <OverlayTrigger placement="bottom" overlay={tooltip1}>
                 <span className="qualification primary-font-color">Inf.02</span>
@@ -94,7 +94,7 @@ function AboutMe() {
         </div>
 
         <div className="language-section">
-          <h2 className="my-4 primary-font-color">{t("textSecAboutMe.mySkills")}:</h2>
+          <h2 className="my-4 primary-font-color">{t("aboutMe.content.mySkills")}:</h2>
           <Accordion>{skills()}</Accordion>
         </div>
       </div>

@@ -2,13 +2,11 @@ export interface ProjectItem {
   name: string;
   imageLink: string;
   description: string[];
-  simulationLink: string;
-  gitHubLink: string;
 }
 
 export interface ProjectSection {
   title: string;
-  list: ProjectItem[]
+  list: ProjectItem[];
 }
 
 export interface LanguageSkill {
@@ -17,49 +15,58 @@ export interface LanguageSkill {
   skills: string[];
 }
 
-export interface AppBtnText {
+export interface ProjectDetailsButtonLabels {
   tryApp: string;
-  githubRepo1: string;
-  githubRepo2: string;
+  openRepository: string;
 }
 
-export interface TextSections {
-  aboutMeText: string;
-  reactProjectsText: string;
-  androidProjectsText: string;
-  contactText: string;
+export interface NavigationSectionLabels {
+  aboutMe: string;
+  reactProjects: string;
+  androidProjects: string;
+  contact: string;
 }
 
-export interface TextSecAboutMe {
-  inf02text: string;
-  inf03text: string;
-  inf04text: string;
-  myNameis: string;
-  helloTxt1: string;
-  helloTxt2: string;
-  helloTxt3: string;
-  helloTxt4: string;
-  helloTxt5: string;
+export interface AboutMeContent {
+  qualificationInf02: string;
+  qualificationInf03: string;
+  qualificationInf04: string;
+  myNameIs: string;
+  iAm: string;
+  jobTitle: string;
+  and: string;
+  secondaryRole: string;
+  learningIntro: string;
   mySkills: string;
 }
 
-export interface TextSecContact {
-  mailCpMsg1: string;
-  mailCpMsg2: string;
-  form: string;
-  formTxt1: string;
-  formTxt2: string;
-  formTxt3: string;
-  formTxt4: string;
-  formTxt5: string;
+export interface ContactContent {
+  copyEmailLabel: string;
+  copiedMessage: string;
+  formTitle: string;
+  nameLabel: string;
+  emailLabel: string;
+  messageLabel: string;
+  messagePlaceholder: string;
+  submitLabel: string;
 }
 
 export interface PortfolioDb {
-  reactJsProjects: ProjectItem[];
-  androidProjects: ProjectItem[];
-  languageSkills: LanguageSkill[];
-  appBtnTxt: AppBtnText;
-  textSections: TextSections;
-  textSecAboutMe: TextSecAboutMe;
-  textSecContact: TextSecContact;
+  projects: {
+    react: ProjectSection;
+    android: ProjectSection;
+  };
+  skills: LanguageSkill[];
+  projectDetails: {
+    buttons: ProjectDetailsButtonLabels;
+  };
+  navigation: {
+    sections: NavigationSectionLabels;
+  };
+  aboutMe: {
+    content: AboutMeContent;
+  };
+  contact: {
+    content: ContactContent;
+  };
 }

@@ -10,9 +10,7 @@
             "The TastyDejvit.com recipe website was created using 5 APIs provided by RapidApi.",
             "This project showcases my skills in working with APIs.",
             "The site offers various categories of dishes such as: desserts, Mexican dishes, Chinese cuisine, and cocktails. Each of these categories has its own featured dish of the day. The displayed recipes can be opened to view detailed ingredients and preparation instructions. An interesting feature is the difficulty level displayed below the name of each dish, along with a corresponding color."
-          ],
-          "simulationLink": "https://tastydejvit.netlify.app",
-          "gitHubLink": "https://github.com/uniowski/tastydejvit"
+          ]
         },
         {
           "name": "Buvi",
@@ -24,9 +22,7 @@
             "The Administrator account, which is secured by an access code during creation, is not allowed to make purchases but is authorized to add or remove shoes from the store's offer.",
             "On the 'Login' subpage, there are demo accounts available.",
             "The frontend was built using React JS, and for visual design, I used Bootstrap. The backend is based on the Firebase platform."
-          ],
-          "simulationLink": "https://buvi.netlify.app",
-          "gitHubLink": "https://github.com/uniowski/buvishop"
+          ]
         },
         {
           "name": "AlfredWeb",
@@ -36,9 +32,7 @@
             "When adding a movie, a poster must be uploaded.",
             "The site's database is based on Firebase by Google.",
             "I added a feature to comment on movies added by other users."
-          ],
-          "simulationLink": "https://alfred-web.netlify.app",
-          "gitHubLink": "https://github.com/uniowski/alfredweb"
+          ]
         }
       ]
     },
@@ -52,9 +46,7 @@
             "TikTakToe is one of my achievements in programming with Java. TicTakToe is a classic game of tic-tac-toe, which was designed and implemented using the Java programming language and XML.",
             "The game has both two-player and single-player modes. In two-player mode, players take turns, and the current turn is indicated at the top of the screen. The game with the computer can be activated by clicking on the name 'Player 2'.",
             "In the app, I used RecyclerView.Adapter to display the game board."
-          ],
-          "simulationLink": "",
-          "gitHubLink": ""
+          ]
         },
         {
           "name": "WordMaster",
@@ -67,9 +59,7 @@
             "Full vocabulary management: WordMaster allows you to fully manage words from within the app. You can delete, edit, change categories, and adjust other parameters to suit your needs.",
             "Learning with categorized words: The app displays words grouped by categories, making it easier to learn and organize materials.",
             "Import and export words: WordMaster allows for importing and exporting words using text files (TXT). You can edit vocabulary on your computer and transfer it back to the app, as well as share words with friends."
-          ],
-          "simulationLink": "",
-          "gitHubLink": ""
+          ]
         },
         {
           "name": "SkaniX",
@@ -81,14 +71,12 @@
             "Database storage: SkaniX saves images in a photo subfolder and stores paths to them in an SQLite database.",
             "Built-in photo cropping: The app features a built-in photo cropping library, which is especially useful for loyalty cards in the form of photos or screenshots, allowing you to adjust their size and crop them as needed.",
             "The SkaniX app is a practical tool that helps organize and efficiently manage loyalty cards. It not only saves time but also prevents loss of cards and improves convenience."
-          ],
-          "simulationLink": "",
-          "gitHubLink": ""
+          ]
         }
       ]
     }
   },
-  "languageSkills": [
+  "skills": [
     {
       "name": "React JS",
       "icon": "react.png",
@@ -152,37 +140,44 @@
       ]
     }
   ],
-  "appBtnTxt": {
-    "tryApp": "Try",
-    "githubRepo1": "",
-    "githubRepo2": "GitHub Repository"
+  "projectDetails": {
+    "buttons": {
+      "tryApp": "Try {{projectName}}",
+      "openRepository": "Open {{projectName}} repository"
+    }
   },
-  "textSections": {
-    "aboutMeText": "About me",
-    "reactProjectsText": "Projects React JS",
-    "androidProjectsText": "Projects Android - Java",
-    "contactText": "Contact"
+  "navigation": {
+    "sections": {
+      "aboutMe": "About me",
+      "reactProjects": "Projects React JS",
+      "androidProjects": "Projects Android - Java",
+      "contact": "Contact"
+    }
   },
-  "textSecAboutMe": {
-    "inf02text": "Administration and operation of computer systems, peripheral devices, and local computer networks.",
-    "inf03text": "Creating and administering websites, web applications, and databases.",
-    "inf04text": "Designing, programming, and testing applications.",
-    "myNameis": "My name is ",
-    "helloTxt1": "I am ",
-    "helloTxt2": "a Software Technician",
-    "helloTxt3": "and ",
-    "helloTxt4": "an IT Technician",
-    "helloTxt5": "I have been learning programming since 2020. I graduated from high school. During my education, I obtained the following qualifications: ",
-    "mySkills": "My skills"
+  "aboutMe": {
+    "content": {
+      "qualificationInf02": "Administration and operation of computer systems, peripheral devices, and local computer networks.",
+      "qualificationInf03": "Creating and administering websites, web applications, and databases.",
+      "qualificationInf04": "Designing, programming, and testing applications.",
+      "myNameIs": "My name is ",
+      "iAm": "I am ",
+      "jobTitle": "a Software Technician",
+      "and": "and ",
+      "secondaryRole": "an IT Technician",
+      "learningIntro": "I have been learning programming since 2020. I graduated from high school. During my education, I obtained the following qualifications: ",
+      "mySkills": "My skills"
+    }
   },
-  "textSecContact": {
-    "mailCpMsg1": "Copy: dawid.uniowski@gmail.com",
-    "mailCpMsg2": "Copied to clipboard",
-    "form": "Form",
-    "formTxt1": "Full Name",
-    "formTxt2": "Email Address",
-    "formTxt3": "Message",
-    "formTxt4": "Your message...",
-    "formTxt5": "Send"
+  "contact": {
+    "content": {
+      "copyEmailLabel": "Copy: dawid.uniowski@gmail.com",
+      "copiedMessage": "Copied to clipboard",
+      "formTitle": "Form",
+      "nameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message...",
+      "submitLabel": "Send"
+    }
   }
 }

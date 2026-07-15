@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
@@ -95,7 +95,7 @@ function Layout({
               onClick={closeMenu}
               className="primary-font-color"
             >
-              {t('textSections.aboutMeText')}
+              {t("navigation.sections.aboutMe")}
             </Link>
           </li>
           <li className="nav-item">
@@ -108,7 +108,7 @@ function Layout({
               onClick={closeMenu}
               className="primary-font-color"
             >
-              {t('textSections.reactProjectsText')}
+              {t("navigation.sections.reactProjects")}
             </Link>
           </li>
           <li className="nav-item">
@@ -121,7 +121,7 @@ function Layout({
               onClick={closeMenu}
               className="primary-font-color"
             >
-              {t('textSections.androidProjectsText')}
+              {t("navigation.sections.androidProjects")}
             </Link>
           </li>
           <li className="nav-item">
@@ -134,7 +134,7 @@ function Layout({
               onClick={closeMenu}
               className="primary-font-color"
             >
-              {t('textSections.contactText')}
+              {t("navigation.sections.contact")}
             </Link>
           </li>
           <li>
@@ -154,14 +154,14 @@ function Layout({
               alt="język polski"
               height={32}
               width={64}
-              onClick={() => changeLanguage('pl')}
+              onClick={() => changeLanguage("pl")}
             />
             <Flag
               code="GB"
               alt="english language"
               height={32}
               width={64}
-              onClick={() => changeLanguage('en')}
+              onClick={() => changeLanguage("en")}
             />
           </li>
         </ul>

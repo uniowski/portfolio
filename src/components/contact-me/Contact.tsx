@@ -14,15 +14,13 @@ function Contact() {
   const [contactActionIcon, setContactActionIcon] = useState<JSX.Element>(
     <BiLogoGmail size={30} className="primary-font-color" />
   );
-  const [contactEmailAddress, setContactEmailAddress] = useState<string>(
-    SOCIAL_LINKS.email
-  );
+  const [contactEmailAddress, setContactEmailAddress] = useState<string>(SOCIAL_LINKS.email);
 
   return (
     <div className="contact anim-apear" id="contact">
       <div className="row">
         <div className="col-md-6 mb-4">
-          <h2 className="primary-font-color">{t("textSections.contactText")}</h2>
+          <h2 className="primary-font-color">{t("navigation.sections.contact")}</h2>
           <div className="row">
             <div className="col-6 mb-4">
               <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noreferrer">
@@ -43,11 +41,7 @@ function Contact() {
               </a>
             </div>
             <div className="col-6 mb-4">
-              <a
-                href={SOCIAL_LINKS.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noreferrer">
                 <div className="card">
                   <div className="card-body text-center custom-contact-card">
                     <BsLinkedin size={30} className="primary-font-color" />
@@ -72,7 +66,7 @@ function Contact() {
                 }}
                 onMouseEnter={() => {
                   setContactActionIcon(<MdContentCopy size={30} className="primary-font-color" />);
-                  setContactEmailAddress(t("textSecContact.mailCpMsg1"));
+                  setContactEmailAddress(t("contact.content.copyEmailLabel"));
                 }}
                 onMouseLeave={() => {
                   setContactActionIcon(<BiLogoGmail size={30} className="primary-font-color" />);
@@ -80,7 +74,7 @@ function Contact() {
                 }}
                 onMouseDownCapture={() => {
                   setContactActionIcon(<FaCheck size={30} className="primary-font-color" />);
-                  setContactEmailAddress(t("textSecContact.mailCpMsg2"));
+                  setContactEmailAddress(t("contact.content.copiedMessage"));
                 }}
               >
                 <div className="card-body text-center custom-contact-card">
@@ -102,23 +96,23 @@ function Contact() {
           </div>
         </div>
         <div className="col-md-6 mb-4">
-          <h2 className="primary-font-color">{t("textSecContact.form")}</h2>
+          <h2 className="primary-font-color">{t("contact.content.formTitle")}</h2>
           <form name="contact" action="/contact" method="post">
             <div className="mb-3">
               <input type="hidden" name="form-name" value="contact" />
               <label htmlFor="name" className="form-label primary-font-color">
-                {t("textSecContact.formTxt1")}
+                {t("contact.content.nameLabel")}
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder={t("textSecContact.formTxt1")}
+                placeholder={t("contact.content.nameLabel")}
                 className="form-control"
                 required
               />
               <label htmlFor="email" className="form-label primary-font-color">
-                {t("textSecContact.formTxt2")}
+                {t("contact.content.emailLabel")}
               </label>
               <input
                 type="email"
@@ -129,17 +123,17 @@ function Contact() {
                 required
               />
               <label htmlFor="message" className="form-label primary-font-color">
-                {t("textSecContact.formTxt3")}
+                {t("contact.content.messageLabel")}
               </label>
               <textarea
                 id="message"
                 name="message"
-                placeholder={t("textSecContact.formTxt4")}
+                placeholder={t("contact.content.messagePlaceholder")}
                 className="form-control"
                 required
               />
               <button type="submit" className="btn btn-info primary-font-color">
-                {t("textSecContact.formTxt5")}
+                {t("contact.content.submitLabel")}
               </button>
             </div>
           </form>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FaGithubSquare } from "react-icons/fa";
+import { APPS_LINKS } from "../../constants/links";
 import type { ProjectItem } from "../../types";
 import "./ProjectDetails.css";
 
@@ -17,13 +18,18 @@ function ProjectDetails({ projectData }: ProjectDetailsProps) {
   }, []);
 
   const { t } = useTranslation();
+  const projectLinks = APPS_LINKS[projectData.name as keyof typeof APPS_LINKS];
 
   const tryMyApp = () => {
-    window.open(projectData.simulationLink, "_blank");
+    if (projectLinks?.deployLink) {
+      window.open(projectLinks.deployLink, "_blank");
+    }
   };
 
   const githubRepo = () => {
-    window.open(projectData.gitHubLink, "_blank");
+    if (projectLinks?.repoLink) {
+      window.open(projectLinks.repoLink, "_blank");
+    }
   };
 
   return (
@@ -36,16 +42,16 @@ function ProjectDetails({ projectData }: ProjectDetailsProps) {
               {description}
             </p>
           ))}
-          {projectData.simulationLink ? (
+          {projectLinks?.deployLink ? (
             <button className="btn btn-info primary-font-color" onClick={tryMyApp}>
-              {`${t('appBtnTxt.tryApp')} ${projectData.name}`}
+              {t("projectDetails.buttons.tryApp", { projectName: projectData.name })}
             </button>
           ) : null}
           <br />
-          {projectData.gitHubLink ? (
+          {projectLinks?.repoLink ? (
             <button className="btn btn-info primary-font-color" onClick={githubRepo}>
               <FaGithubSquare size={30} />
-              {`${t('appBtnTxt.githubRepo1')} ${projectData.name} ${t('appBtnTxt.githubRepo2')}`}
+              {t("projectDetails.buttons.openRepository", { projectName: projectData.name })}
             </button>
           ) : null}
         </div>
