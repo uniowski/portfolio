@@ -6,12 +6,12 @@ import "./App.css";
 import Layout from "./components/layout/Layout";
 import Main from "./components/main/Main";
 import ProjectDetails from "./components/project-details/ProjectDetails";
-import { ProjectItem } from "./types";
+import { ProjectSection } from "./types";
 
 function App() {
   const { t } = useTranslation();
-  const reactJsProjects = t('reactJsProjects', { returnObjects: true }) as ProjectItem[];
-  const androidProjects = t('androidProjects', { returnObjects: true }) as ProjectItem[];
+  const reactJsProjects = t('projects.react', { returnObjects: true }) as ProjectSection;
+  const androidProjects = t('projects.android', { returnObjects: true }) as ProjectSection;
 
   const [isThemeDark, setIsThemeDark] = useState<boolean>(true);
 
@@ -67,18 +67,18 @@ function App() {
           }
         >
           <Route index element={<Main />} />
-          {reactJsProjects.map((appData) => (
+          {reactJsProjects.list.map((projectData) => (
             <Route
-              key={`react-${appData.name}`}
-              path={appData.name}
-              element={<ProjectDetails appData={appData} />}
+              key={`react-${projectData.name}`}
+              path={projectData.name}
+              element={<ProjectDetails projectData={projectData} />}
             />
           ))}
-          {androidProjects.map((appData) => (
+          {androidProjects.list.map((projectData) => (
             <Route
-              key={`android-${appData.name}`}
-              path={appData.name}
-              element={<ProjectDetails appData={appData} />}
+              key={`android-${projectData.name}`}
+              path={projectData.name}
+              element={<ProjectDetails projectData={projectData} />}
             />
           ))}
         </Route>

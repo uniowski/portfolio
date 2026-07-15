@@ -6,6 +6,11 @@ export interface ProjectItem {
   gitHubLink: string;
 }
 
+export interface ProjectSection {
+  title: string;
+  list: ProjectItem[]
+}
+
 export interface LanguageSkill {
   name: string;
   icon: string;

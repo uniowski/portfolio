@@ -151,7 +151,7 @@ function Layout({
           <li className="nav-item">
             <Flag
               code="PL"
-              alt="jezyk polski"
+              alt="język polski"
               height={32}
               width={64}
               onClick={() => changeLanguage('pl')}

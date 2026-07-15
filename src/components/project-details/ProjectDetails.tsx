@@ -5,10 +5,10 @@ import type { ProjectItem } from "../../types";
 import "./ProjectDetails.css";
 
 interface ProjectDetailsProps {
-  appData: ProjectItem;
+  projectData: ProjectItem;
 }
 
-function ProjectDetails({ appData }: ProjectDetailsProps) {
+function ProjectDetails({ projectData }: ProjectDetailsProps) {
   useEffect(() => {
     window.scroll({
       top: 0,
@@ -19,41 +19,41 @@ function ProjectDetails({ appData }: ProjectDetailsProps) {
   const { t } = useTranslation();
 
   const tryMyApp = () => {
-    window.open(appData.simulationLink, "_blank");
+    window.open(projectData.simulationLink, "_blank");
   };
 
-  const gitHubApp = () => {
-    window.open(appData.gitHubLink, "_blank");
+  const githubRepo = () => {
+    window.open(projectData.gitHubLink, "_blank");
   };
 
   return (
     <div className="project-details">
-      <h1 className="primary-font-color">{appData.name}</h1>
+      <h1 className="primary-font-color">{projectData.name}</h1>
       <div className="details-container">
         <div className="details-description">
-          {appData.description.map((description) => (
+          {projectData.description.map((description) => (
             <p key={description} className="primary-font-color text-1">
               {description}
             </p>
           ))}
-          {appData.simulationLink ? (
+          {projectData.simulationLink ? (
             <button className="btn btn-info primary-font-color" onClick={tryMyApp}>
-              {`${t('appBtnTxt.tryApp')} ${appData.name}`}
+              {`${t('appBtnTxt.tryApp')} ${projectData.name}`}
             </button>
           ) : null}
           <br />
-          {appData.gitHubLink ? (
-            <button className="btn btn-info primary-font-color" onClick={gitHubApp}>
+          {projectData.gitHubLink ? (
+            <button className="btn btn-info primary-font-color" onClick={githubRepo}>
               <FaGithubSquare size={30} />
-              {`${t('appBtnTxt.githubRepo1')} ${appData.name} ${t('appBtnTxt.githubRepo2')}`}
+              {`${t('appBtnTxt.githubRepo1')} ${projectData.name} ${t('appBtnTxt.githubRepo2')}`}
             </button>
           ) : null}
         </div>
         <div className="details-picture-container">
-          <a href={`pictures/${appData.imageLink}`} className="fullImage">
+          <a href={`pictures/${projectData.imageLink}`} className="fullImage">
             <img
-              src={`pictures/${appData.imageLink}`}
-              alt={`zdjecie przedstawiajace projekt o nazwie ${appData.imageLink}`}
+              src={`pictures/${projectData.imageLink}`}
+              alt={`zdjecie przedstawiajace projekt o nazwie ${projectData.imageLink}`}
               className="details-picture"
             />
           </a>
