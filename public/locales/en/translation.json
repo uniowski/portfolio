@@ -76,70 +76,49 @@
       ]
     }
   },
-  "skills": [
-    {
-      "name": "React JS",
-      "icon": "react.png",
-      "skills": [
-        "Creating interactive UI components",
-        "Managing application state",
-        "Implementing routing",
-        "Using API",
-        "Using libraries such as React Router and React Bootstrap",
-        "Deploying React applications to production"
+  "skills": {
+    "frontend-architecture": {
+      "title": "Frontend & State Architecture",
+      "description": [
+        "Projektowanie i rozwój skalowalnej architektury aplikacji SPA w oparciu o komponenty wielokrotnego użytku.",
+        "Efektywne zarządzanie stanem serwerowym i optymalizacja zapytań API przy użyciu TanStack Query (caching, optymistyczne aktualizacje, synchronizacja w tle).",
+        "Centralizacja i kontrola globalnego stanu aplikacji za pomocą Redux Toolkit w złożonych systemach biznesowych.",
+        "Dbanie o optymalizację wydajnościową (profilowanie komponentów, code-splitting, lazy loading)."
       ]
     },
-    {
-      "name": "Redux",
-      "icon": "redux.png",
-      "skills": [
-        "Managing application state with Redux and Redux Toolkit",
-        "Creating actions, reducers, and store to centralize state",
-        "Integrating Redux with React using react-redux"
+    "ui-design-systems": {
+      "title": "UI & Design Systems",
+      "description": [
+        "Szybkie i precyzyjne wdrażanie responsywnych interfejsów (Pixel-Perfect) na podstawie makiet Figma/Adobe XD przy użyciu Tailwind CSS.",
+        "Praca w metodologii Component-Driven Development – budowanie reużywalnych komponentów i spójnych systemów UI (Design Systems).",
+        "Dbanie o dostępność cyfrową (accessibility - a11y) oraz optymalizację stylów pod kątem wydajności renderowania."
       ]
     },
-    {
-      "name": "JavaScript",
-      "icon": "js.png",
-      "skills": [
-        "DOM manipulation",
-        "Event handling",
-        "Creating animations and interactions",
-        "Testing and debugging JavaScript code"
+    "type-safety-quality": {
+      "title": "Type Safety & Code Quality",
+      "description": [
+        "Zapewnianie pełnego typowania (Type Safety) w aplikacjach frontendowych za pomocą TypeScriptu.",
+        "Konfiguracja i przestrzeganie standardów czystego kodu przy użyciu ESLint i Prettier w pracy zespołowej.",
+        "Bezpieczna walidacja danych wejściowych z formularzy oraz kontraktów API przy użyciu schematów Zod."
       ]
     },
-    {
-      "name": "Java",
-      "icon": "java.png",
-      "skills": [
-        "Object-oriented programming",
-        "Mobile app development",
-        "Working with databases",
-        "Creating user interfaces using Java Swing"
+    "backend-automation": {
+      "title": "Backend, Scripting & Automation",
+      "description": [
+        "Automatyzacja powtarzalnych procesów, parsowanie danych i pisanie skryptów narzędziowych w Pythonie.",
+        "Projektowanie i integracja z zewnętrznymi usługami przez interfejsy REST API.",
+        "Podstawowa praca z bazami danych i integracja procesów backendowych."
       ]
     },
-    {
-      "name": "PHP",
-      "icon": "php.png",
-      "skills": [
-        "Working with MySQL databases, Apache",
-        "Collaborating with CMS systems",
-        "Creating and managing database tables",
-        "Efficient implementation of CRUD operations"
-      ]
-    },
-    {
-      "name": "Bootstrap",
-      "icon": "bootstrap.png",
-      "skills": [
-        "Creating responsive UIs",
-        "Using Bootstrap grid",
-        "Using Bootstrap components",
-        "Customizing Bootstrap for specific needs",
-        "Experience with Bootstrap version 5"
+    "dev-workflow": {
+      "title": "Developer Workflow & Tooling",
+      "description": [
+        "Doświadczenie w pracy zespołowej z wykorzystaniem systemów kontroli wersji (Git, Git Flow) oraz procesów Code Review.",
+        "Konfiguracja nowoczesnych środowisk uruchomieniowych (Vite) usprawniających proces tworzenia i budowania aplikacji.",
+        "Sprawne poruszanie się w środowiskach Unix/Linux w codziennej pracy deweloperskiej."
       ]
     }
-  ],
+  },
   "projectDetails": {
     "buttons": {
       "tryApp": "Try {{projectName}}",

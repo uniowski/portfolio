@@ -1,36 +1,64 @@
+import * as LucideIcons from "lucide-react";
 import { Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { useTranslation } from "react-i18next";
-import type { LanguageSkill } from "../../types";
+import { skillsConfig } from "../../constants/skills";
+import type { LocalizedSkill } from "../../types";
 import "./AboutMe.css";
 
 function AboutMe() {
   const { t } = useTranslation();
 
-  const languageSkills = t("skills", { returnObjects: true }) as LanguageSkill[];
+  const localizedSkills = t("skills", { returnObjects: true }) as Record<string, LocalizedSkill>;
 
-  const skills = () => {
-    return languageSkills.map((language, index) => (
-      <Card className="m-3" key={language.name}>
-        <Accordion.Item eventKey={`${index}`}>
-          <Accordion.Header>
-            <img
-              src={`icons/${language.icon}`}
-              alt={`ikona jezyka programowania - ${language.name}`}
-              className="language-icon"
-            />
-            <p className="m-3 primary-font-color">{language.name}</p>
-          </Accordion.Header>
-          <Accordion.Body>
-            {language.skills.map((skill) => (
-              <p key={skill} className="m-1 primary-font-color">
-                {skill}
-              </p>
-            ))}
-          </Accordion.Body>
-        </Accordion.Item>
-      </Card>
-    ));
+  const renderAllSkills = () => {
+    return skillsConfig.map((skillDefinition) => {
+      const skill = localizedSkills[skillDefinition.id];
+
+      if (!skill) {
+        return null;
+      }
+
+      const IconComponent = (LucideIcons[skillDefinition.icon as keyof typeof LucideIcons] || LucideIcons.Code) as React.ComponentType<{ className?: string }>;
+
+      return (
+        <Card className="m-3" key={skillDefinition.id}>
+          <Accordion.Item eventKey={skillDefinition.id}>
+            <Accordion.Header>
+              <div className="language-icon-wrapper d-flex align-items-center justify-content-center">
+                <IconComponent className="primary-font-color" />
+              </div>
+              <p className="m-3 primary-font-color">{skill.title}</p>
+            </Accordion.Header>
+            <Accordion.Body>
+              <div className="d-flex flex-wrap gap-2 mb-3">
+                {skillDefinition.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-1 rounded text-sm fw-semibold"
+                    style={{
+                      backgroundColor: "rgba(127, 127, 127, 0.1)",
+                      color: "var(--accent-color)",
+                      border: "1px solid rgba(127, 127, 127, 0.15)",
+                      fontSize: "0.85rem"
+                    }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="skill-description-points">
+                {skill.description.map((point) => (
+                  <p key={point} className="m-1 primary-font-color" style={{ lineHeight: "1.6" }}>
+                    • {point}
+                  </p>
+                ))}
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Card>
+      );
+    });
   };
 
   const tooltip1 = (
@@ -95,7 +123,7 @@ function AboutMe() {
 
         <div className="language-section">
           <h2 className="my-4 primary-font-color">{t("aboutMe.content.mySkills")}:</h2>
-          <Accordion>{skills()}</Accordion>
+          <Accordion>{renderAllSkills()}</Accordion>
         </div>
       </div>
     </div>

@@ -9,10 +9,16 @@ export interface ProjectSection {
   list: ProjectItem[];
 }
 
-export interface LanguageSkill {
-  name: string;
+export interface LocalizedSkill {
+  title: string;
+  description: string[];
+}
+
+export interface SkillDefinition {
+  id: string;
   icon: string;
-  skills: string[];
+  technologies: string[];
+  translationKey: string
 }
 
 export interface ProjectDetailsButtonLabels {
@@ -56,7 +62,7 @@ export interface PortfolioDb {
     react: ProjectSection;
     android: ProjectSection;
   };
-  skills: LanguageSkill[];
+  skills: Record<string, LocalizedSkill>;
   projectDetails: {
     buttons: ProjectDetailsButtonLabels;
   };

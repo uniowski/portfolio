@@ -76,69 +76,49 @@
       ]
     }
   },
-  "skills": [
-    {
-      "name": "React JS",
-      "icon": "react.png",
-      "skills": [
-        "Tworzenie interaktywnych komponentów UI",
-        "Zarządzanie stanem aplikacji",
-        "Implementowanie routowania",
-        "Korzystanie z interfejsu API",
-        "Używanie bibliotek takich jak React Router oraz React Bootstrap",
-        "Wdrażanie aplikacji React do produkcji"
+  "skills": {
+    "frontend-architecture": {
+      "title": "Frontend & State Architecture",
+      "description": [
+        "Projektowanie i rozwój skalowalnej architektury aplikacji SPA w oparciu o komponenty wielokrotnego użytku.",
+        "Efektywne zarządzanie stanem serwerowym i optymalizacja zapytań API przy użyciu TanStack Query (caching, optymistyczne aktualizacje, synchronizacja w tle).",
+        "Centralizacja i kontrola globalnego stanu aplikacji za pomocą Redux Toolkit w złożonych systemach biznesowych.",
+        "Dbanie o optymalizację wydajnościową (profilowanie komponentów, code-splitting, lazy loading)."
       ]
     },
-    {
-      "name": "Redux",
-      "icon": "redux.png",
-      "skills": [
-        "Zarządzanie stanem aplikacji za pomocą Reduxa i Redux Toolkit",
-        "Tworzenie akcji, reducerów i store do centralizacji stanu",
-        "Integracja Reduxa z Reactem za pomocą react-redux"
+    "ui-design-systems": {
+      "title": "UI & Design Systems",
+      "description": [
+        "Szybkie i precyzyjne wdrażanie responsywnych interfejsów (Pixel-Perfect) na podstawie makiet Figma/Adobe XD przy użyciu Tailwind CSS.",
+        "Praca w metodologii Component-Driven Development – budowanie reużywalnych komponentów i spójnych systemów UI (Design Systems).",
+        "Dbanie o dostępność cyfrową (accessibility - a11y) oraz optymalizację stylów pod kątem wydajności renderowania."
       ]
     },
-    {
-      "name": "JavaScript",
-      "icon": "js.png",
-      "skills": [
-        "Manipulowanie DOM",
-        "Obsługa zdarzeń",
-        "Tworzenie animacji i interakcji",
-        "Testowanie i debugowanie kodu JavaScript"
+    "type-safety-quality": {
+      "title": "Type Safety & Code Quality",
+      "description": [
+        "Zapewnianie pełnego typowania (Type Safety) w aplikacjach frontendowych za pomocą TypeScriptu.",
+        "Konfiguracja i przestrzeganie standardów czystego kodu przy użyciu ESLint i Prettier w pracy zespołowej.",
+        "Bezpieczna walidacja danych wejściowych z formularzy oraz kontraktów API przy użyciu schematów Zod."
       ]
     },
-    {
-      "name": "Java",
-      "icon": "java.png",
-      "skills": [
-        "Programowanie obiektowe, aplikacji mobilnych",
-        "Praca z bazami danych",
-        "Tworzenie interfejsów użytkownika w Java Swing"
+    "backend-automation": {
+      "title": "Backend, Scripting & Automation",
+      "description": [
+        "Automatyzacja powtarzalnych procesów, parsowanie danych i pisanie skryptów narzędziowych w Pythonie.",
+        "Projektowanie i integracja z zewnętrznymi usługami przez interfejsy REST API.",
+        "Podstawowa praca z bazami danych i integracja procesów backendowych."
       ]
     },
-    {
-      "name": "PHP",
-      "icon": "php.png",
-      "skills": [
-        "Praca z bazami danych MySQL, Apache",
-        "Umiejętność współpracy z systemami CMS",
-        "Tworzenie i zarządzanie tabelami baz danych",
-        "Sprawne korzytsanie z operacji CRUD"
-      ]
-    },
-    {
-      "name": "Bootstrap",
-      "icon": "bootstrap.png",
-      "skills": [
-        "Tworzenie responsywnych UI",
-        "Korzystanie z siatki Bootstrap",
-        "Korzystanie z komponentów Bootstrap",
-        "Dostosowywanie Bootstrapa do własnych potrzeb",
-        "Doświadczenie z Bootstrapem w wersji 5"
+    "dev-workflow": {
+      "title": "Developer Workflow & Tooling",
+      "description": [
+        "Doświadczenie w pracy zespołowej z wykorzystaniem systemów kontroli wersji (Git, Git Flow) oraz procesów Code Review.",
+        "Konfiguracja nowoczesnych środowisk uruchomieniowych (Vite) usprawniających proces tworzenia i budowania aplikacji.",
+        "Sprawne poruszanie się w środowiskach Unix/Linux w codziennej pracy deweloperskiej."
       ]
     }
-  ],
+  },
   "projectDetails": {
     "buttons": {
       "tryApp": "Wypróbuj {{projectName}}",
