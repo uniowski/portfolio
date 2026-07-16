@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { Link } from "react-scroll";
+import { Link, scrollSpy } from "react-scroll";
 import Switch from "react-switch";
 import Flag from "react-world-flags";
 import "./Layout.css";
@@ -71,6 +71,9 @@ function Layout({
           to="o-mnie"
           onClick={closeMenu}
           offset={offsetValue}
+          containerId="page-scroll-container"
+          smooth={"easeOutCubic"}
+          duration={600}
           className="logoContainer primary-font-color"
         >
           {logoTheme()}
@@ -89,9 +92,10 @@ function Layout({
             <Link
               to="o-mnie"
               spy={true}
-              smooth={false}
+              smooth={"easeOutCubic"}
               offset={offsetValue}
-              duration={500}
+              duration={600}
+              containerId="page-scroll-container"
               onClick={closeMenu}
               className="primary-font-color"
             >
@@ -102,9 +106,10 @@ function Layout({
             <Link
               to="projects-react-js"
               spy={true}
-              smooth={false}
+              smooth={"easeOutCubic"}
               offset={offsetValue}
-              duration={500}
+              duration={600}
+              containerId="page-scroll-container"
               onClick={closeMenu}
               className="primary-font-color"
             >
@@ -115,9 +120,10 @@ function Layout({
             <Link
               to="projects-android"
               spy={true}
-              smooth={false}
+              smooth={"easeOutCubic"}
               offset={offsetValue}
-              duration={300}
+              duration={600}
+              containerId="page-scroll-container"
               onClick={closeMenu}
               className="primary-font-color"
             >
@@ -128,9 +134,10 @@ function Layout({
             <Link
               to="contact"
               spy={true}
-              smooth={false}
+              smooth={"easeOutCubic"}
               offset={offsetValue}
-              duration={300}
+              duration={600}
+              containerId="page-scroll-container"
               onClick={closeMenu}
               className="primary-font-color"
             >
@@ -167,7 +174,9 @@ function Layout({
         </ul>
       </nav>
       <main>
-        <Outlet />
+        <div className="page-container" id="page-scroll-container" onScroll={() => scrollSpy.update()}>
+          <Outlet />
+        </div>
       </main>
     </div>
   );
