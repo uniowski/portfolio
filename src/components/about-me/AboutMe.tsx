@@ -49,7 +49,7 @@ function AboutMe() {
               </div>
               <div className="skill-description-points">
                 {skill.description.map((point) => (
-                  <p key={point} className="m-1 primary-font-color" style={{ lineHeight: "1.6" }}>
+                  <p key={point} className="m-1 primary-font-color">
                     • {point}
                   </p>
                 ))}
