@@ -1,31 +1,26 @@
-import type { PortfolioDb } from "../../types";
+import { useTranslation } from 'react-i18next';
+import { ProjectSection } from '../../types';
 import AboutMe from "../about-me/AboutMe";
 import Contact from "../contact-me/Contact";
 import MyProject from "../my-projects/MyProjects";
 
-interface MainProps {
-  db: PortfolioDb;
-}
+function Main() {
+  const { t } = useTranslation();
+  const projectsR = t('projects.react', { returnObjects: true }) as ProjectSection;
+  const projectsA = t('projects.android', { returnObjects: true }) as ProjectSection;
 
-function Main({ db }: MainProps) {
   return (
     <>
-      <AboutMe
-        sectionTitle={db.textSections.aboutMeText}
-        languageSkills={db.languageSkills}
-        textSecAboutMe={db.textSecAboutMe}
-      />
+      <AboutMe />
       <MyProject
-        sectionTitle={db.textSections.reactProjectsText}
-        itemList={db.reactJsProjects}
+        data={projectsR}
         pointer="projects-react-js"
       />
       <MyProject
-        sectionTitle={db.textSections.androidProjectsText}
-        itemList={db.androidProjects}
+        data={projectsA}
         pointer="projects-android"
       />
-      <Contact sectionTitle={db.textSections.contactText} textSecContact={db.textSecContact} />
+      <Contact />
     </>
   );
 }

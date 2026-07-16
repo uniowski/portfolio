@@ -1,0 +1,162 @@
+{
+  "projects": {
+    "react": {
+      "title": "Projects React JS",
+      "list": [
+        {
+          "name": "TastyDejvit.com",
+          "imageLink": "web1.jpg",
+          "description": [
+            "The TastyDejvit.com recipe website was created using 5 APIs provided by RapidApi.",
+            "This project showcases my skills in working with APIs.",
+            "The site offers various categories of dishes such as: desserts, Mexican dishes, Chinese cuisine, and cocktails. Each of these categories has its own featured dish of the day. The displayed recipes can be opened to view detailed ingredients and preparation instructions. An interesting feature is the difficulty level displayed below the name of each dish, along with a corresponding color."
+          ]
+        },
+        {
+          "name": "Buvi",
+          "imageLink": "web2.jpg",
+          "description": [
+            "Buvi is my own online shoe store project.",
+            "On the Buvi site, I successfully designed and implemented a user account system. A user can register an account with either the Client or Administrator role.",
+            "The Client account is authorized to browse the store, add items to the cart, and edit it.",
+            "The Administrator account, which is secured by an access code during creation, is not allowed to make purchases but is authorized to add or remove shoes from the store's offer.",
+            "On the 'Login' subpage, there are demo accounts available.",
+            "The frontend was built using React JS, and for visual design, I used Bootstrap. The backend is based on the Firebase platform."
+          ]
+        },
+        {
+          "name": "AlfredWeb",
+          "imageLink": "web3.jpg",
+          "description": [
+            "AlfredWeb is a site created in the likeness of the Polish Filmweb service. The site includes a fully functional movie list management system.",
+            "When adding a movie, a poster must be uploaded.",
+            "The site's database is based on Firebase by Google.",
+            "I added a feature to comment on movies added by other users."
+          ]
+        }
+      ]
+    },
+    "android": {
+      "title": "Projects Android",
+      "list": [
+        {
+          "name": "TicTakToe",
+          "imageLink": "and1.jpg",
+          "description": [
+            "TikTakToe is one of my achievements in programming with Java. TicTakToe is a classic game of tic-tac-toe, which was designed and implemented using the Java programming language and XML.",
+            "The game has both two-player and single-player modes. In two-player mode, players take turns, and the current turn is indicated at the top of the screen. The game with the computer can be activated by clicking on the name 'Player 2'.",
+            "In the app, I used RecyclerView.Adapter to display the game board."
+          ]
+        },
+        {
+          "name": "WordMaster",
+          "imageLink": "and2.jpg",
+          "description": [
+            "WordMaster is a versatile language learning tool that provides an effective way to master new words and phrases. This advanced app offers users many features that make the learning process easier and give full control over vocabulary.",
+            "The main features of the WordMaster app include:",
+            "Various types of tests: WordMaster offers three types of tests for learning words - reinforcement tests, section tests, and tests for the least known words. This allows you to tailor the learning process to your needs and preferences.",
+            "Manual word addition: You can manually add new words to the database. This is an ideal solution when you want to learn words while adding them.",
+            "Full vocabulary management: WordMaster allows you to fully manage words from within the app. You can delete, edit, change categories, and adjust other parameters to suit your needs.",
+            "Learning with categorized words: The app displays words grouped by categories, making it easier to learn and organize materials.",
+            "Import and export words: WordMaster allows for importing and exporting words using text files (TXT). You can edit vocabulary on your computer and transfer it back to the app, as well as share words with friends."
+          ]
+        },
+        {
+          "name": "SkaniX",
+          "imageLink": "and3.jpg",
+          "description": [
+            "The SkaniX app makes life easier for anyone who uses loyalty cards and codes. How many times have you had an issue where a discount app in chain stores didn't work, or the account was logged out? Not a problem anymore! The solution is the SkaniX app, which allows you to keep all your loyalty cards in one place. SkaniX is a convenient and intuitive tool for managing loyalty programs and cards.",
+            "The main features of the SkaniX app include:",
+            "Adding and managing loyalty cards: The app allows easy addition of new cards via screenshots, editing existing ones, and deleting those that are no longer needed.",
+            "Database storage: SkaniX saves images in a photo subfolder and stores paths to them in an SQLite database.",
+            "Built-in photo cropping: The app features a built-in photo cropping library, which is especially useful for loyalty cards in the form of photos or screenshots, allowing you to adjust their size and crop them as needed.",
+            "The SkaniX app is a practical tool that helps organize and efficiently manage loyalty cards. It not only saves time but also prevents loss of cards and improves convenience."
+          ]
+        }
+      ]
+    }
+  },
+  "skills": {
+    "frontend-architecture": {
+      "title": "Frontend & State Architecture",
+      "description": [
+        "Projektowanie i rozwój skalowalnej architektury aplikacji SPA w oparciu o komponenty wielokrotnego użytku.",
+        "Efektywne zarządzanie stanem serwerowym i optymalizacja zapytań API przy użyciu TanStack Query (caching, optymistyczne aktualizacje, synchronizacja w tle).",
+        "Centralizacja i kontrola globalnego stanu aplikacji za pomocą Redux Toolkit w złożonych systemach biznesowych.",
+        "Dbanie o optymalizację wydajnościową (profilowanie komponentów, code-splitting, lazy loading)."
+      ]
+    },
+    "ui-design-systems": {
+      "title": "UI & Design Systems",
+      "description": [
+        "Szybkie i precyzyjne wdrażanie responsywnych interfejsów (Pixel-Perfect) na podstawie makiet Figma/Adobe XD przy użyciu Tailwind CSS.",
+        "Praca w metodologii Component-Driven Development – budowanie reużywalnych komponentów i spójnych systemów UI (Design Systems).",
+        "Dbanie o dostępność cyfrową (accessibility - a11y) oraz optymalizację stylów pod kątem wydajności renderowania."
+      ]
+    },
+    "type-safety-quality": {
+      "title": "Type Safety & Code Quality",
+      "description": [
+        "Zapewnianie pełnego typowania (Type Safety) w aplikacjach frontendowych za pomocą TypeScriptu.",
+        "Konfiguracja i przestrzeganie standardów czystego kodu przy użyciu ESLint i Prettier w pracy zespołowej.",
+        "Bezpieczna walidacja danych wejściowych z formularzy oraz kontraktów API przy użyciu schematów Zod."
+      ]
+    },
+    "backend-automation": {
+      "title": "Backend, Scripting & Automation",
+      "description": [
+        "Automatyzacja powtarzalnych procesów, parsowanie danych i pisanie skryptów narzędziowych w Pythonie.",
+        "Projektowanie i integracja z zewnętrznymi usługami przez interfejsy REST API.",
+        "Podstawowa praca z bazami danych i integracja procesów backendowych."
+      ]
+    },
+    "dev-workflow": {
+      "title": "Developer Workflow & Tooling",
+      "description": [
+        "Doświadczenie w pracy zespołowej z wykorzystaniem systemów kontroli wersji (Git, Git Flow) oraz procesów Code Review.",
+        "Konfiguracja nowoczesnych środowisk uruchomieniowych (Vite) usprawniających proces tworzenia i budowania aplikacji.",
+        "Sprawne poruszanie się w środowiskach Unix/Linux w codziennej pracy deweloperskiej."
+      ]
+    }
+  },
+  "projectDetails": {
+    "buttons": {
+      "tryApp": "Try {{projectName}}",
+      "openRepository": "Open {{projectName}} repository"
+    }
+  },
+  "navigation": {
+    "sections": {
+      "aboutMe": "About me",
+      "reactProjects": "Projects React JS",
+      "androidProjects": "Projects Android - Java",
+      "contact": "Contact"
+    }
+  },
+  "aboutMe": {
+    "content": {
+      "qualificationInf02": "Administration and operation of computer systems, peripheral devices, and local computer networks.",
+      "qualificationInf03": "Creating and administering websites, web applications, and databases.",
+      "qualificationInf04": "Designing, programming, and testing applications.",
+      "myNameIs": "My name is ",
+      "iAm": "I am ",
+      "jobTitle": "a Software Technician",
+      "and": "and ",
+      "secondaryRole": "an IT Technician",
+      "learningIntro": "I have been learning programming since 2020. I graduated from high school. During my education, I obtained the following qualifications: ",
+      "mySkills": "My skills"
+    }
+  },
+  "contact": {
+    "content": {
+      "copyEmailLabel": "Copy: dawid.uniowski@gmail.com",
+      "copiedMessage": "Copied to clipboard",
+      "formTitle": "Form",
+      "nameLabel": "Full Name",
+      "emailLabel": "Email Address",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message...",
+      "submitLabel": "Send"
+    }
+  }
+}

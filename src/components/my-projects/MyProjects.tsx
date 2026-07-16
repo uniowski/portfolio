@@ -1,20 +1,19 @@
-import type { ProjectItem } from "../../types";
+import { ProjectSection } from "../../types";
 import Tile from "../tile/Tile";
 import "./MyProjects.css";
 
 interface MyProjectProps {
-  sectionTitle: string;
-  itemList: ProjectItem[];
+  data: ProjectSection;
   pointer: string;
 }
 
-function MyProject({ sectionTitle, itemList, pointer }: MyProjectProps) {
+function MyProject({ data, pointer }: MyProjectProps) {
   return (
     <div className="projects-section anim-apear" id={pointer}>
-      <h2 className="primary-font-color">{sectionTitle}</h2>
+      <h2 className="primary-font-color">{data.title}</h2>
       <div className="grid-projects">
-        {itemList.map((item) => (
-          <Tile key={item.id} item={item} />
+        {data.list.map((item) => (
+          <Tile key={item.name} item={item} />
         ))}
       </div>
     </div>
