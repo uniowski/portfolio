@@ -52,10 +52,23 @@
 }
 
 main {
-  margin: auto;
-  max-width: 1800px;
-  position: initial;
+  width: 100%;
+  position: relative;
   z-index: 0;
+  display: block;
+}
+
+.page-container {
+  position: fixed;
+  top: 90px; /* below fixed navbar */
+  left: 0;
+  right: 0;
+  bottom: 0; /* anchored to bottom */
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 1200px) {

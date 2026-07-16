@@ -6,6 +6,13 @@ a {
   text-decoration: none !important;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
 .profile-picture {
   width: auto;
   height: 40rem;
@@ -34,7 +41,7 @@ a {
 .App-light {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .App-dark {
@@ -64,7 +71,7 @@ a {
 @media screen and (max-width: 1200px) {
   .App-dark,
   .App-light {
-    height: 100%;
+    min-height: 100%;
   }
 
   .nav-menu {
@@ -152,5 +159,8 @@ a {
 *::-webkit-scrollbar-thumb {
   background-color: var(--accent-color);
   border-radius: 10px;
-  border: 3px solid #ffffff;
+  border: 3px solid var(--surface-bg);
+}
+*::-webkit-scrollbar-track {
+  background-color: var(--surface-bg);
 }
