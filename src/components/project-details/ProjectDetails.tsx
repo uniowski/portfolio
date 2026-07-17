@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FaGithubSquare } from "react-icons/fa";
 import { APPS_LINKS } from "../../constants/links";
 import type { ProjectItem } from "../../types";
+import Button from "../ui/Button";
 import "./ProjectDetails.css";
 
 interface ProjectDetailsProps {
@@ -43,16 +44,16 @@ function ProjectDetails({ projectData }: ProjectDetailsProps) {
             </p>
           ))}
           {projectLinks?.deployLink ? (
-            <button className="btn btn-info primary-font-color" onClick={tryMyApp}>
+            <Button onClick={tryMyApp}>
               {t("projectDetails.buttons.tryApp", { projectName: projectData.name })}
-            </button>
+            </Button>
           ) : null}
           <br />
           {projectLinks?.repoLink ? (
-            <button className="btn btn-info primary-font-color" onClick={githubRepo}>
+            <Button onClick={githubRepo}>
               <FaGithubSquare size={30} />
               {t("projectDetails.buttons.openRepository", { projectName: projectData.name })}
-            </button>
+            </Button>
           ) : null}
         </div>
         <div className="details-picture-container">

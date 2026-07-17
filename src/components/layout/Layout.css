@@ -1,5 +1,5 @@
 .navigationbar {
-  position:fixed;
+  position: fixed;
   height: 90px;
   width: 100%;
   top: 0;
@@ -12,18 +12,21 @@
   padding: 0 1rem;
   z-index: 10;
 }
-.nav-menu a {
-  color: #ffffff;
+.nav-menu a,
+.nav-menu a.primary-font-color {
   text-decoration: none;
+  display: inline-block;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    padding-bottom 0.2s ease,
+    border-color 0.2s ease;
 }
 .nav-menu {
   display: flex;
 }
 .navigationbar > ul {
   list-style-type: none;
-}
-.logoContainer{
-
 }
 .logo {
   width: 50vw;
@@ -45,6 +48,7 @@
 .nav-item a:hover {
   padding-bottom: 12px;
   border-bottom: 2px solid var(--accent-color);
+  transform: translateY(-1px);
 }
 .nav-item .active {
   padding-bottom: 12px;
@@ -57,7 +61,7 @@
 main {
   margin: auto;
   max-width: 1800px;
-  position:initial;
+  position: initial;
   z-index: 0;
 }
 

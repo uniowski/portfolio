@@ -1,5 +1,5 @@
 * {
-  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 a {
@@ -11,8 +11,6 @@ a {
   height: 40rem;
 }
 
-
-
 @media (prefers-reduced-motion: no-preference) {
   .anim-apear {
     animation-name: apear;
@@ -20,183 +18,144 @@ a {
     animation-fill-mode: forwards;
     animation-range: 150px 400px !important;
     animation-timeline: view() !important;
-    scale: 0.8;
+    transform: scale(0.8);
     opacity: 0;
   }
 
   @keyframes apear {
     to {
-      scale: 1;
+      transform: scale(1);
       opacity: 1;
     }
   }
 }
 
-
-.App-dark {
-  /* min-width: 720px; */
+.App-dark,
+.App-light {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  color: var(--font-primary);
+}
 
-  .navigationbar {
-    background-color: var(--primary-color);
-  }
-
-  @media screen and (max-width: 1200px) {
-    height: 100%;
-
-    .nav-menu {
-      background-color: #00000090;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-    }
-
-    .profile-picture {
-      width: auto;
-      height: 30rem;
-    }
-  }
-
-  .accordion {
-    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%233fa8bf%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e");
-    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%233fa8bf%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e");
-    width: 50%;
-    min-width: 330px;
-  }
-
-  .card,
-  .accordion-item,
-  .accordion-header,
-  .accordion-button {
-    background-color: var(--github-black);
-  }
-
-  .accordion-item {
-    border: 0px solid black;
-  }
-
-  .accordion-button:not(.collapsed) {
-    box-shadow: inset 0 0 0 0;
-  }
-
-  .about-me,
-  .cv-container,
-  .projects-section,
-  .project-details,
-  .contact,
-  .accordion-button:not(.collapsed) {
-    background-color: var(--secondary-color);
-  }
-
-  .name-section,
-  .picture-section,
-  .language-section,
-  .details-description,
-  .tile,
-  ::-webkit-scrollbar-track {
-    background-color: var(--primary-color);
-  }
-
-  .primary-font-color {
-    color: #ffffff;
-  }
-
-  .accent-font-color {
-    color: var(--accent-color);
-  }
-
-  ::selection {
-    background-color: var(--accent-color);
-    color: #000;
-  }
+.App-dark {
+  --nav-bg: var(--primary-color);
+  --section-bg: var(--secondary-color);
+  --surface-bg: var(--primary-color);
+  --card-bg: var(--github-black);
+  --tile-bg: var(--primary-color);
+  --font-primary: #ffffff;
+  --nav-background-color: #00000090;
 }
 
 .App-light {
-  /* min-width: 720px; */
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  --nav-bg: var(--secondary-color-light);
+  --section-bg: var(--secondary-color-light);
+  --surface-bg: var(--background-light);
+  --card-bg: var(--primary-color-light);
+  --tile-bg: var(--primary-color-light);
+  --font-primary: #000000;
+  --nav-background-color: #ffffff90;
+}
 
-  .navigationbar {
-    background-color: var(--secondary-color-light);
-  }
+.navigationbar {
+  background-color: var(--nav-bg);
+}
 
-  @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
+  .App-dark,
+  .App-light {
     height: 100%;
-
-    .nav-menu {
-      background-color: #ffffff90;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-    }
-
-    .profile-picture {
-      width: auto;
-      height: 30rem;
-    }
   }
 
-  .accordion {
-    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%2340a8c4%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e");
-    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%2340a8c4%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e");
-    width: 50%;
-    min-width: 330px;
+  .nav-menu {
+    background-color: var(--nav-background-color);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
-  .card,
-  .accordion-item,
-  .accordion-header,
-  .accordion-button,
-  .tile {
-    background-color: var(--primary-color-light);
+  .profile-picture {
+    width: auto;
+    height: 30rem;
   }
+}
 
-  .accordion-item {
-    border: 0px solid black;
-  }
+.accordion-item {
+  border: 0px;
+}
 
-  .accordion-button:not(.collapsed) {
-    box-shadow: inset 0 0 0 0;
-  }
+.accordion {
+  width: 50%;
+  min-width: 330px;
+}
 
-  .projects-section,
-  .about-me,
-  .contact,
-  .cv-container,
-  .project-details,
-  .accordion-button:not(.collapsed) {
-    background-color: var(--secondary-color-light);
-  }
+.App-dark .accordion {
+  --bs-accordion-btn-icon: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%233fa8bf%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e');
+  --bs-accordion-btn-active-icon: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%233fa8bf%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e');
+}
 
-  .name-section,
-  .picture-section,
-  .language-section,
-  .details-description,
-  ::-webkit-scrollbar-track {
-    background-color: var(--background-light);
-  }
+.App-light .accordion {
+  --bs-accordion-btn-icon: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%2340a8c4%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e');
+  --bs-accordion-btn-active-icon: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27none%27 stroke=%27%2340a8c4%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpath d=%27M2 5L8 11L14 5%27/%3e%3c/svg%3e');
+}
 
-  .primary-font-color {
-    color: #000000;
-  }
+.card,
+.accordion-item,
+.accordion-header,
+.accordion-button {
+  background-color: var(--card-bg);
+}
 
-  .accent-font-color {
-    color: var(--accent-color);
-  }
+.tile {
+  background-color: var(--tile-bg);
+}
 
-  ::selection {
-    background-color: var(--accent-color);
-    color: #000;
-  }
+.accordion-button,
+.accordion-button:focus,
+.accordion-button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
+
+.about-me,
+.cv-container,
+.projects-section,
+.project-details,
+.contact {
+  background-color: var(--section-bg);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--card-bg);
+  color: var(--font-primary);
+}
+
+.name-section,
+.picture-section,
+.language-section,
+.details-description,
+::-webkit-scrollbar-track {
+  background-color: var(--surface-bg);
+}
+
+.primary-font-color {
+  color: var(--font-primary);
+}
+
+.accent-font-color {
+  color: var(--accent-color);
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: #000;
 }
 
 *::-webkit-scrollbar {
-  width: 16px;
+  width: 8px;
 }
-
 *::-webkit-scrollbar-thumb {
   background-color: var(--accent-color);
-  border-radius: 10px;
-  border: 3px solid #ffffff;
+  border-radius: 4px;
 }

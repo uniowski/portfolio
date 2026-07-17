@@ -5,7 +5,7 @@
       "list": [
         {
           "name": "TastyDejvit.com",
-          "imageLink": "web1.jpg",
+          "imageLink": "web1.webp",
           "description": [
             "Strona z przepisamy TastyDejvit.com została stworzona przy uzyciu 5 API dostarzanych przez RapidApi",
             "Projekt ten prezentuje moje umiejętności w posługiwaniu się interfejsem API.",
@@ -14,7 +14,7 @@
         },
         {
           "name": "Buvi",
-          "imageLink": "web2.jpg",
+          "imageLink": "web2.webp",
           "description": [
             "Buvi to mój autorski projekt sklepu internetowego z butami.",
             "Na stronie Buvi udało mi się zaprojektować i zaimplementować system kont użytkowników. Użytkownik może zarejestrować swoje konto o randze Klient oraz Administrator. ",
@@ -26,7 +26,7 @@
         },
         {
           "name": "AlfredWeb",
-          "imageLink": "web3.jpg",
+          "imageLink": "web3.webp",
           "description": [
             "Strona AlfredWeb powstała na podobieństwo polskiego serwisu Filmweb. Na stronie dodałem w pełni działający system zarządzania listą filmów.",
             "W trakcie dodawania filmu, należy wgrać plakat do filmu",
@@ -41,7 +41,7 @@
       "list": [
         {
           "name": "TicTakToe",
-          "imageLink": "and1.jpg",
+          "imageLink": "and1.webp",
           "description": [
             "Gra TikTakToe to jedno z moich osiągnieć w programowaniu w języku Java. TikTakToe to klasyczna gra w kółko i krzyżyk, która została zaprojektowana i zaimplementowana przy użyciu języka programowania Java oraz XML.",
             "Gra ma zarówno tryb dwuosobowy jak i jednoosobowy. W trybie dwuosobowym grcze grają turami a aktualną kolejność wskazazana jest u góry ekranu. Tryb gry z komputerem można włączyć klikając na nazwę Player 2",
@@ -50,7 +50,7 @@
         },
         {
           "name": "WordMaster",
-          "imageLink": "and2.jpg",
+          "imageLink": "and2.webp",
           "description": [
             "Aplikacja WordMaster to wszechstronne narzędzie do nauki języków obcych, które zapewnia skuteczny sposób na opanowanie nowych słówek i wyrażeń. Ta zaawansowana aplikacja oferuje użytkownikom wiele funkcji, które ułatwiają proces nauki i zapewniają pełną kontrolę nad słownictwem.",
             "Główne funkcje aplikacji WordMaster to:",
@@ -63,7 +63,7 @@
         },
         {
           "name": "SkaniX",
-          "imageLink": "and3.jpg",
+          "imageLink": "and3.webp",
           "description": [
             "Aplikacja SkaniX to rozwiązanie, które ułatwia życie każdemu, kto korzysta z kart i kodów lojalnościowych. Ile razy zdarzyło Ci się, że aplikacja zniżkowa w sieciówkach nie zadziałała lub konto było wylogowane? To już nie problem! Rozwiązaniem jest aplikacja SkaniX, dzięki której możesz trzymać wszystkie swoje karty lojalnościowe w jednym miejscu. SkaniX to wygodne i intuicyjne narzędzie do zarządzania programami partnerskimi oraz kartami lojalnościowymi.",
             "Główne funkcje aplikacji SkaniX to:",
@@ -157,6 +157,11 @@
       "messageLabel": "Wiadomość",
       "messagePlaceholder": "Wiadomość...",
       "submitLabel": "Wyślij"
+    },
+    "thankYou": {
+      "title": "Dziękuję!",
+      "message": "Twoja wiadomość została wysłana pomyślnie.",
+      "back": "Powrót do strony głównej"
     }
   }
 }

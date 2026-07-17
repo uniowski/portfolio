@@ -12,6 +12,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  align-items: stretch;
+  align-content: stretch;
+  min-height: 0;
 }
 
 .picture-section {
@@ -24,14 +27,99 @@
   background-image: url(/files/ambientShapes.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 0;
 }
 
 .language-section {
   flex: 1 0 350px;
-  padding: 1rem;
+  align-self: stretch;
+  padding: 1rem 1rem 1.25rem 1rem;
   border-radius: 1rem;
-  display: grid;
-  place-items: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.picture-section,
+.language-section {
+  min-height: 0;
+}
+
+.language-section h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.language-section > .accordion,
+.skill-container,
+.skill-container .accordion {
+  width: 100%;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-anchor: none;
+}
+
+.skill-container .accordion {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.skill-container .card {
+  width: auto;
+  max-width: calc(100% - 2rem);
+  margin: 0 auto 1rem;
+  box-sizing: border-box;
+}
+
+.skill-container .card.m-3:first-child {
+  margin-top: 0 !important;
+}
+
+.skill-container .card:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .picture-section,
+  .language-section {
+    height: 40rem;
+    max-height: 40rem;
+  }
+
+  .skill-container {
+    flex: 1 1 0;
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+}
+
+.picture-section {
+  overflow: hidden;
+}
+
+.picture-section img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
 }
 
 .name-section {

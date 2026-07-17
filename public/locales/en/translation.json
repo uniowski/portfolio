@@ -5,7 +5,7 @@
       "list": [
         {
           "name": "TastyDejvit.com",
-          "imageLink": "web1.jpg",
+          "imageLink": "web1.webp",
           "description": [
             "The TastyDejvit.com recipe website was created using 5 APIs provided by RapidApi.",
             "This project showcases my skills in working with APIs.",
@@ -14,7 +14,7 @@
         },
         {
           "name": "Buvi",
-          "imageLink": "web2.jpg",
+          "imageLink": "web2.webp",
           "description": [
             "Buvi is my own online shoe store project.",
             "On the Buvi site, I successfully designed and implemented a user account system. A user can register an account with either the Client or Administrator role.",
@@ -26,7 +26,7 @@
         },
         {
           "name": "AlfredWeb",
-          "imageLink": "web3.jpg",
+          "imageLink": "web3.webp",
           "description": [
             "AlfredWeb is a site created in the likeness of the Polish Filmweb service. The site includes a fully functional movie list management system.",
             "When adding a movie, a poster must be uploaded.",
@@ -41,7 +41,7 @@
       "list": [
         {
           "name": "TicTakToe",
-          "imageLink": "and1.jpg",
+          "imageLink": "and1.webp",
           "description": [
             "TikTakToe is one of my achievements in programming with Java. TicTakToe is a classic game of tic-tac-toe, which was designed and implemented using the Java programming language and XML.",
             "The game has both two-player and single-player modes. In two-player mode, players take turns, and the current turn is indicated at the top of the screen. The game with the computer can be activated by clicking on the name 'Player 2'.",
@@ -50,7 +50,7 @@
         },
         {
           "name": "WordMaster",
-          "imageLink": "and2.jpg",
+          "imageLink": "and2.webp",
           "description": [
             "WordMaster is a versatile language learning tool that provides an effective way to master new words and phrases. This advanced app offers users many features that make the learning process easier and give full control over vocabulary.",
             "The main features of the WordMaster app include:",
@@ -63,7 +63,7 @@
         },
         {
           "name": "SkaniX",
-          "imageLink": "and3.jpg",
+          "imageLink": "and3.webp",
           "description": [
             "The SkaniX app makes life easier for anyone who uses loyalty cards and codes. How many times have you had an issue where a discount app in chain stores didn't work, or the account was logged out? Not a problem anymore! The solution is the SkaniX app, which allows you to keep all your loyalty cards in one place. SkaniX is a convenient and intuitive tool for managing loyalty programs and cards.",
             "The main features of the SkaniX app include:",
@@ -157,6 +157,11 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Your message...",
       "submitLabel": "Send"
+    },
+    "thankYou": {
+      "title": "Thank you!",
+      "message": "Your message has been sent successfully.",
+      "back": "Back to homepage"
     }
   }
 }

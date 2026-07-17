@@ -49,7 +49,7 @@ function Layout({
       return (
         <img
           className="image-fluid logo"
-          src="/icons/new-dawid-uniowski-logo-dark.png"
+          src="/icons/new-dawid-uniowski-logo-dark.webp"
           alt="logo Dawid Uniowski - dark"
         />
       );
@@ -58,7 +58,7 @@ function Layout({
     return (
       <img
         className="image-fluid logo"
-        src="/icons/new-dawid-uniowski-logo-light.png"
+        src="/icons/new-dawid-uniowski-logo-light.webp"
         alt="logo Dawid Uniowski - light"
       />
     );
@@ -138,14 +138,21 @@ function Layout({
             </Link>
           </li>
           <li>
+            <label className="visually-hidden" htmlFor="theme-switch">
+              {t("navigation.themeToggle")}
+            </label>
             <Switch
+              id="theme-switch"
               className="theme-switch"
               onChange={handleChange}
               checked={isThemeDark}
-              checkedIcon={<img src="/icons/dark-theme.png" alt="dark mode" height={28} width={28} />}
-              uncheckedIcon={<img src="/icons/light-theme.png" alt="light mode" height={28} width={28} />}
+              checkedIcon={<img src="/icons/dark-theme.webp" alt="dark mode" height={28} width={28} />}
+              uncheckedIcon={<img src="/icons/light-theme.webp" alt="light mode" height={28} width={28} />}
               onColor="#222222"
               offColor="#c4c4c4"
+              aria-label={t("navigation.themeToggle")}
+              role="switch"
+              aria-checked={isThemeDark}
             />
           </li>
           <li className="nav-item">
