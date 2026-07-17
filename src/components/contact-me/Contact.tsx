@@ -4,6 +4,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { FaCheck, FaGithubSquare } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
+import { useNavigate } from "react-router-dom"; // <-- Dodany import
 import { SOCIAL_LINKS } from "../../constants/links";
 import Button from "../ui/Button";
 import ContactField from "../ui/ContactField";
@@ -13,11 +14,28 @@ import "./Contact.css";
 
 function Contact() {
   const { t } = useTranslation();
+  const navigate = useNavigate(); // <-- Inicjalizacja nawigacji
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const myForm = e.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        navigate("/contact");
+      })
+      .catch((error) => console.error("Błąd wysyłania formularza:", error));
+  };
 
   return (
     <div className="contact anim-apear" id="contact">
-      <div
-        className="row">
+      <div className="row">
         <div className="col-md-6 mb-4">
           <h2 className="primary-font-color">{t("navigation.sections.contact")}</h2>
           <div className="row">
@@ -62,7 +80,7 @@ function Contact() {
         </div>
         <div className="col-md-6 mb-4">
           <h2 className="primary-font-color">{t("contact.content.formTitle")}</h2>
-          <form name="contact" action="/contact/thanks/" method="post" data-netlify="true">
+          <form name="contact" onSubmit={handleSubmit} data-netlify="true">
             <div className="mb-3">
               <input type="hidden" name="form-name" value="contact" />
               <ContactField id="name" name="name" label={t("contact.content.nameLabel")} placeholder={t("contact.content.nameLabel")} required />
