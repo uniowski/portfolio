@@ -5,20 +5,32 @@
   transform: scale(1);
   cursor: pointer;
   text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  overflow: hidden;
 }
 .tile:hover {
   box-shadow: 5px 5px var(--accent-color);
   transform: scale(1.02);
   z-index: 1;
-  .project-picture {
-    filter: blur(0px) !important;
-  }
+}
+.tile:hover .project-picture {
+  filter: blur(0px) !important;
+  transform: scale(1.03);
 }
 
 .project-title {
   margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 20px;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+.tile:hover .project-title {
+  color: var(--accent-color);
+  transform: translateX(4px);
 }
 
 .project-picture {
@@ -26,4 +38,7 @@
   height: 80%;
   object-fit: cover;
   border-radius: 1rem;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }

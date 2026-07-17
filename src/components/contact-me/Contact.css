@@ -17,8 +17,13 @@
   width: 3rem;
 }
 
-.custom-contact-card:hover {
-  /* box-shadow: 4px 4px var(--accent-font-color); */
+.custom-contact-card {
   border-radius: var(--bs-border-radius);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.custom-contact-card:hover {
   box-shadow: 5px 5px var(--accent-color);
 }
