@@ -62,7 +62,7 @@ function Contact() {
         </div>
         <div className="col-md-6 mb-4">
           <h2 className="primary-font-color">{t("contact.content.formTitle")}</h2>
-          <form name="contact" action="/contact/thanks" method="post" data-netlify="true">
+          <form name="contact" action="/contact/thanks/" method="post" data-netlify="true">
             <div className="mb-3">
               <input type="hidden" name="form-name" value="contact" />
               <ContactField id="name" name="name" label={t("contact.content.nameLabel")} placeholder={t("contact.content.nameLabel")} required />
