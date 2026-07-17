@@ -21,29 +21,28 @@ function Contact() {
           <h2 className="primary-font-color">{t("navigation.sections.contact")}</h2>
           <div className="row">
             <div className="col-6 mb-4">
-              <SocialIconCard href={SOCIAL_LINKS.facebook}>
+              <SocialIconCard link={SOCIAL_LINKS.facebook}>
                 <BsFacebook size={30} className="primary-font-color" />
               </SocialIconCard>
             </div>
             <div className="col-6 mb-4">
-              <SocialIconCard href={SOCIAL_LINKS.instagram}>
+              <SocialIconCard link={SOCIAL_LINKS.instagram}>
                 <AiFillInstagram size={30} className="primary-font-color" />
               </SocialIconCard>
             </div>
             <div className="col-6 mb-4">
-              <SocialIconCard href={SOCIAL_LINKS.linkedin}>
+              <SocialIconCard link={SOCIAL_LINKS.linkedin}>
                 <BsLinkedin size={30} className="primary-font-color" />
               </SocialIconCard>
             </div>
             <div className="col-6 mb-4">
-              <SocialIconCard href={SOCIAL_LINKS.github}>
+              <SocialIconCard link={SOCIAL_LINKS.github}>
                 <FaGithubSquare size={30} className="primary-font-color" />
               </SocialIconCard>
             </div>
             <div className="col-12 col-md-6 mb-4">
               <CopyableContactCard
-                value={SOCIAL_LINKS.email}
-                href={`mailto:${SOCIAL_LINKS.email}`}
+                contact={SOCIAL_LINKS.email}
                 copyLabel={t("contact.content.copyEmailLabel")}
                 copiedMessage={t("contact.content.copiedMessage")}
                 initialIcon={<BiLogoGmail size={30} className="primary-font-color" />}
@@ -53,13 +52,8 @@ function Contact() {
             </div>
             <div className="col-12 col-md-6 mb-4">
               <CopyableContactCard
-                value={SOCIAL_LINKS.phone}
-                href={`tel:${SOCIAL_LINKS.phone.replace(/\s/g, "")}`}
-                copyLabel={t("contact.content.copyEmailLabel")}
-                copiedMessage={t("contact.content.copiedMessage")}
+                contact={SOCIAL_LINKS.phone}
                 initialIcon={<AiFillPhone size={30} className="primary-font-color" />}
-                copyIcon={<MdContentCopy size={30} className="primary-font-color" />}
-                successIcon={<FaCheck size={30} className="primary-font-color" />}
                 isCopyable={false}
               />
             </div>

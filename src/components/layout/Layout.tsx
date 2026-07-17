@@ -138,7 +138,11 @@ function Layout({
             </Link>
           </li>
           <li>
+            <label className="visually-hidden" htmlFor="theme-switch">
+              {t("navigation.themeToggle")}
+            </label>
             <Switch
+              id="theme-switch"
               className="theme-switch"
               onChange={handleChange}
               checked={isThemeDark}
@@ -146,6 +150,9 @@ function Layout({
               uncheckedIcon={<img src="/icons/light-theme.webp" alt="light mode" height={28} width={28} />}
               onColor="#222222"
               offColor="#c4c4c4"
+              aria-label={t("navigation.themeToggle")}
+              role="switch"
+              aria-checked={isThemeDark}
             />
           </li>
           <li className="nav-item">

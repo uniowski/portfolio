@@ -1,26 +1,39 @@
 import React, { useEffect, useState } from "react";
 
+interface ContactLinkItem {
+  value?: string;
+  url?: string;
+  label?: string;
+  alt?: string;
+}
+
 interface CopyableContactCardProps {
-  value: string;
-  copyLabel: string;
-  copiedMessage: string;
+  contact: ContactLinkItem;
+  copyLabel?: string;
+  copiedMessage?: string;
   initialIcon: React.ReactElement;
-  copyIcon: React.ReactElement;
-  successIcon: React.ReactElement;
-  href?: string;
+  copyIcon?: React.ReactElement;
+  successIcon?: React.ReactElement;
   isCopyable?: boolean;
 }
 
 export default function CopyableContactCard({
-  value,
+  contact,
   copyLabel,
   copiedMessage,
   initialIcon,
   copyIcon,
   successIcon,
-  href,
   isCopyable = true,
 }: CopyableContactCardProps) {
+  const value = contact.value ?? contact.url ?? "";
+  const href = contact.url
+    ? contact.url
+    : contact.value
+      ? contact.value.includes("@")
+        ? `mailto:${contact.value}`
+        : `tel:${contact.value.replace(/\s/g, "")}`
+      : undefined;
   const [icon, setIcon] = useState<React.ReactElement>(initialIcon);
   const [text, setText] = useState<string>(value);
   const [isDesktop, setIsDesktop] = useState(() => {
