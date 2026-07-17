@@ -157,6 +157,11 @@
       "messageLabel": "Message",
       "messagePlaceholder": "Your message...",
       "submitLabel": "Send"
+    },
+    "thankYou": {
+      "title": "Thank you!",
+      "message": "Your message has been sent successfully.",
+      "back": "Back to homepage"
     }
   }
 }

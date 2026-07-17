@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import ThankYouPage from "./components/contact-me/ThankYouPage";
 import Layout from "./components/layout/Layout";
 import Main from "./components/main/Main";
 import ProjectDetails from "./components/project-details/ProjectDetails";
@@ -66,6 +67,7 @@ function App() {
             />
           }
         >
+          <Route path="contact" element={<ThankYouPage />} />
           <Route index element={<Main />} />
           {reactJsProjects.list.map((projectData) => (
             <Route
