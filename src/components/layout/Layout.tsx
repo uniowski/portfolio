@@ -49,7 +49,7 @@ function Layout({
       return (
         <img
           className="image-fluid logo"
-          src="/icons/new-dawid-uniowski-logo-dark.png"
+          src="/icons/new-dawid-uniowski-logo-dark.webp"
           alt="logo Dawid Uniowski - dark"
         />
       );
@@ -58,7 +58,7 @@ function Layout({
     return (
       <img
         className="image-fluid logo"
-        src="/icons/new-dawid-uniowski-logo-light.png"
+        src="/icons/new-dawid-uniowski-logo-light.webp"
         alt="logo Dawid Uniowski - light"
       />
     );
@@ -142,8 +142,8 @@ function Layout({
               className="theme-switch"
               onChange={handleChange}
               checked={isThemeDark}
-              checkedIcon={<img src="/icons/dark-theme.png" alt="dark mode" height={28} width={28} />}
-              uncheckedIcon={<img src="/icons/light-theme.png" alt="light mode" height={28} width={28} />}
+              checkedIcon={<img src="/icons/dark-theme.webp" alt="dark mode" height={28} width={28} />}
+              uncheckedIcon={<img src="/icons/light-theme.webp" alt="light mode" height={28} width={28} />}
               onColor="#222222"
               offColor="#c4c4c4"
             />
