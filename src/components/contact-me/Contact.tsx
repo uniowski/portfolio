@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AiFillInstagram, AiFillPhone } from "react-icons/ai";
 import { BiLogoGmail } from "react-icons/bi";
@@ -13,9 +12,6 @@ import "./Contact.css";
 
 function Contact() {
   const { t } = useTranslation();
-
-  const [contactActionIcon] = useState<JSX.Element>(<BiLogoGmail size={30} className="primary-font-color" />);
-  const [contactEmailAddress] = useState<string>(SOCIAL_LINKS.email);
 
   return (
     <div className="contact anim-apear" id="contact">
@@ -46,7 +42,8 @@ function Contact() {
             </div>
             <div className="col-12 col-md-6 mb-4">
               <CopyableContactCard
-                email={SOCIAL_LINKS.email}
+                value={SOCIAL_LINKS.email}
+                href={`mailto:${SOCIAL_LINKS.email}`}
                 copyLabel={t("contact.content.copyEmailLabel")}
                 copiedMessage={t("contact.content.copiedMessage")}
                 initialIcon={<BiLogoGmail size={30} className="primary-font-color" />}
@@ -55,14 +52,16 @@ function Contact() {
               />
             </div>
             <div className="col-12 col-md-6 mb-4">
-              <a href="tel:+48793070996">
-                <div className="card">
-                  <div className="card-body text-center custom-contact-card">
-                    <AiFillPhone size={30} className="primary-font-color" />
-                    <p className="m-0 primary-font-color">{SOCIAL_LINKS.phone}</p>
-                  </div>
-                </div>
-              </a>
+              <CopyableContactCard
+                value={SOCIAL_LINKS.phone}
+                href={`tel:${SOCIAL_LINKS.phone.replace(/\s/g, "")}`}
+                copyLabel={t("contact.content.copyEmailLabel")}
+                copiedMessage={t("contact.content.copiedMessage")}
+                initialIcon={<AiFillPhone size={30} className="primary-font-color" />}
+                copyIcon={<MdContentCopy size={30} className="primary-font-color" />}
+                successIcon={<FaCheck size={30} className="primary-font-color" />}
+                isCopyable={false}
+              />
             </div>
           </div>
         </div>

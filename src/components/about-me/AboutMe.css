@@ -71,6 +71,7 @@
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
+  overflow-anchor: none;
 }
 
 .skill-container .accordion {

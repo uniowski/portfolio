@@ -1,5 +1,5 @@
 * {
-  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 a {
@@ -34,7 +34,9 @@ a {
 .App-light {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: var(--section-bg);
+  color: var(--font-primary);
 }
 
 .App-dark {
@@ -114,15 +116,20 @@ a {
 .accordion-button:focus-visible {
   outline: none !important;
   box-shadow: none !important;
+  transition: none !important;
 }
 
 .about-me,
 .cv-container,
 .projects-section,
 .project-details,
-.contact,
-.accordion-button:not(.collapsed) {
+.contact {
   background-color: var(--section-bg);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--card-bg);
+  color: var(--font-primary);
 }
 
 .name-section,

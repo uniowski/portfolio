@@ -57,7 +57,7 @@ function AboutMe() {
         <div className="picture-section">
           <img
             src="/icons/dawiduniowskiportret.webp"
-            alt="Zdjecie portretowe przedstawiajace Dawida Uniowskiego"
+            alt="Zdjecie portretowe"
             loading="lazy"
             className="profile-picture"
           />
