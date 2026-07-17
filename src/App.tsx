@@ -67,7 +67,7 @@ function App() {
             />
           }
         >
-          <Route path="contact" element={<ThankYouPage />} />
+          <Route path="contact/success" element={<ThankYouPage />} />
           <Route index element={<Main />} />
           {reactJsProjects.list.map((projectData) => (
             <Route
