@@ -5,6 +5,7 @@ import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { FaCheck, FaGithubSquare } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
 import { SOCIAL_LINKS } from "../../constants/links";
+import Button from "../ui/Button";
 import ContactField from "../ui/ContactField";
 import CopyableContactCard from "../ui/CopyableContactCard";
 import SocialIconCard from "../ui/SocialIconCard";
@@ -67,9 +68,9 @@ function Contact() {
               <ContactField id="name" name="name" label={t("contact.content.nameLabel")} placeholder={t("contact.content.nameLabel")} required />
               <ContactField id="email" name="email" label={t("contact.content.emailLabel")} type="email" placeholder="example@exp.com" required />
               <ContactField id="message" name="message" label={t("contact.content.messageLabel")} as="textarea" placeholder={t("contact.content.messagePlaceholder")} required />
-              <button type="submit" className="btn btn-info primary-font-color">
+              <Button type="submit">
                 {t("contact.content.submitLabel")}
-              </button>
+              </Button>
             </div>
           </form>
         </div>
