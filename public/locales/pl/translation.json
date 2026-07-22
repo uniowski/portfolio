@@ -80,42 +80,42 @@
     "frontend-architecture": {
       "title": "Frontend & State Architecture",
       "description": [
-        "Projektowanie i rozwój skalowalnej architektury aplikacji SPA w oparciu o komponenty wielokrotnego użytku.",
-        "Efektywne zarządzanie stanem serwerowym i optymalizacja zapytań API przy użyciu TanStack Query (caching, optymistyczne aktualizacje, synchronizacja w tle).",
-        "Centralizacja i kontrola globalnego stanu aplikacji za pomocą Redux Toolkit w złożonych systemach biznesowych.",
-        "Dbanie o optymalizację wydajnościową (profilowanie komponentów, code-splitting, lazy loading)."
+        "Projektowanie i rozwój skalowalnej architektury aplikacji webowych w oparciu o reużywalne, modularne komponenty.",
+        "Efektywne zarządzanie stanem serwerowym oraz optymalizacja zapytań API przy użyciu TanStack Query (caching, optymistyczne aktualizacje).",
+        "Zarządzanie globalnym stanem aplikacji webowej przy użyciu Redux oraz Zustand.",
+        "Optymalizacja wydajności aplikacji i UX z wykorzystaniem lazy loading."
       ]
     },
     "ui-design-systems": {
       "title": "UI & Design Systems",
       "description": [
-        "Szybkie i precyzyjne wdrażanie responsywnych interfejsów (Pixel-Perfect) na podstawie makiet Figma/Adobe XD przy użyciu Tailwind CSS.",
-        "Praca w metodologii Component-Driven Development – budowanie reużywalnych komponentów i spójnych systemów UI (Design Systems).",
-        "Dbanie o dostępność cyfrową (accessibility - a11y) oraz optymalizację stylów pod kątem wydajności renderowania."
+        "Precyzyjne wdrażanie responsywnych interfejsów (Pixel-Perfect) na podstawie projektów z Figma z wykorzystaniem Tailwind CSS.",
+        "Praca w metodologii Component-Driven Development - budowanie spójnych systemów UI oraz reużywalnych bibliotek komponentów.",
+        "Customizacja, rozbudowa i integracja gotowych bibliotek komponentów UI pod wymagania projektu.",
+        "Dbanie o dostępność cyfrową (accessibility - WCAG) oraz optymalizację stylów pod kątem wydajności renderowania."
       ]
     },
     "type-safety-quality": {
       "title": "Type Safety & Code Quality",
       "description": [
-        "Zapewnianie pełnego typowania (Type Safety) w aplikacjach frontendowych za pomocą TypeScriptu.",
-        "Konfiguracja i przestrzeganie standardów czystego kodu przy użyciu ESLint i Prettier w pracy zespołowej.",
-        "Bezpieczna walidacja danych wejściowych z formularzy oraz kontraktów API przy użyciu schematów Zod."
+        "Zapewnianie pełnego typowania w aplikacjach za pomocą TypeScriptu.",
+        "Konfiguracja oraz przestrzeganie standardów czystego kodu.",
+        "Walidacja danych wejściowych z formularzy oraz zapytań API przy użyciu biblioteki Zod."
       ]
     },
     "backend-automation": {
       "title": "Backend, Scripting & Automation",
       "description": [
-        "Automatyzacja powtarzalnych procesów, parsowanie danych i pisanie skryptów narzędziowych w Pythonie.",
-        "Projektowanie i integracja z zewnętrznymi usługami przez interfejsy REST API.",
-        "Podstawowa praca z bazami danych i integracja procesów backendowych."
+        "Automatyzacja powtarzalnych procesów, parsowanie danych i tworzenie skryptów narzędziowych w Pythonie.",
+        "Projektowanie oraz integracja z zewnętrznymi usługami poprzez interfejsy REST API.",
+        "Praca z relacyjnymi i nierelacyjnymi bazami danych oraz tworzenie i integracja backendu."
       ]
     },
     "dev-workflow": {
       "title": "Developer Workflow & Tooling",
       "description": [
-        "Doświadczenie w pracy zespołowej z wykorzystaniem systemów kontroli wersji (Git, Git Flow) oraz procesów Code Review.",
-        "Konfiguracja nowoczesnych środowisk uruchomieniowych (Vite) usprawniających proces tworzenia i budowania aplikacji.",
-        "Sprawne poruszanie się w środowiskach Unix/Linux w codziennej pracy deweloperskiej."
+        "Efektywna praca zespołowa z wykorzystaniem systemów kontroli wersji.",
+        "Konfiguracja nowoczesnych środowisk uruchomieniowyc usprawniających proces tworzenia i budowania aplikacji."
       ]
     }
   },
