@@ -134,18 +134,11 @@
     }
   },
   "aboutMe": {
-    "content": {
-      "qualificationInf02": "Administracja i eksploatacja systemów komputerowych, urządzeń peryferyjnych i lokalnych sieci komputerowych.",
-      "qualificationInf03": "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych.",
-      "qualificationInf04": "Projektowanie, programowanie i testowanie aplikacji.",
-      "myNameIs": "Nazywam się ",
-      "iAm": "Jestem ",
-      "jobTitle": "Technikiem Programistą",
-      "and": "oraz ",
-      "secondaryRole": "Technikiem Informatykiem",
-      "learningIntro": "Programowania uczę się od 2020 roku. Kończąc technikum zdobyłem następujące kwalifikacje: ",
-      "mySkills": "Moje umiejętności"
-    }
+    "title": "O mnie",
+    "name": "Nazywam się <accent>Dawid Uniowski</accent>",
+    "paragraph1": "Jestem <accent>Fullstack Developerem</accent> z <bold>1.5-rocznym</bold> doświadczeniem komercyjnym w projektach zagranicznych i wewnętrznych. Programuję od <bold>5 lat</bold>.",
+    "paragraph2": "Specjalizuję się w tworzeniu <bold>aplikacji webowych i mobilnych</bold>. Pracując w software house, realizowałem projekty dla klientów z branż <sector>BioTech</sector>, <sector>MedTech</sector> i <sector>FinTech</sector>",
+    "paragraph3": "Gdzie współpracowałem bezpośrednio z klientami przy pełnym cyklu wytwarzania oprogramowania."
   },
   "contact": {
     "content": {
