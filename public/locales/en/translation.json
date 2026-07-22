@@ -135,6 +135,7 @@
   },
   "aboutMe": {
     "title": "About Me",
+    "mySkills": "My skills",
     "name": "My name is <accent>Dawid Uniowski</accent>",
     "paragraph1": "I am a <accent>Fullstack Developer</accent> with <bold>1.5 years</bold> of commercial experience in international and internal projects. I've been coding for <bold>5 years</bold>.",
     "paragraph2": "I specialize in building <bold>web and mobile applications</bold>. Working at a software house, I delivered projects for sectors like <sector>BioTech</sector>, <sector>MedTech</sector> and <sector>FinTech</sector>",

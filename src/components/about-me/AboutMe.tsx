@@ -75,7 +75,7 @@ function AboutMe() {
         </div>
 
         <div className="language-section">
-          <h2 className="my-3 primary-font-color">{t("aboutMe.content.mySkills")}:</h2>
+          <h2 className="my-3 primary-font-color">{t("aboutMe.mySkills")}</h2>
           <div className="skill-container">
             <Accordion>{renderAllSkills()}</Accordion>
           </div>
