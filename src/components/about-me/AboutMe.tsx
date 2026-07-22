@@ -1,8 +1,7 @@
 import Accordion from "react-bootstrap/Accordion";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { skillsConfig } from "../../constants/skills";
 import type { LocalizedSkill } from "../../types";
-import QualificationTooltip from "../ui/QualificationTooltip";
 import SkillAccordionItem from "../ui/SkillAccordionItem";
 import "./AboutMe.css";
 
@@ -31,27 +30,39 @@ function AboutMe() {
       <div className="cv-container">
         <div className="name-section">
           <h1 className="primary-font-color name-line">
-            {t("aboutMe.content.myNameIs")}
-            <span className="accent-font-color no-wrap">Dawid Uniowski</span>
+            <Trans
+              i18nKey="aboutMe.name"
+              components={{
+                accent: <span className="accent-font-color no-wrap" />
+              }}
+            />
           </h1>
 
-          <p className="primary-font-color">
-            {t("aboutMe.content.iAm")}
-            <span className="accent-font-color">{t("aboutMe.content.jobTitle")}</span>{" "}
-            {t("aboutMe.content.and")}
-            <span className="accent-font-color">{t("aboutMe.content.secondaryRole")}</span>.
+          <p className="primary-font-color text-lg leading-relaxed">
+            <Trans
+              i18nKey="aboutMe.paragraph1"
+              components={{
+                accent: <span className="accent-font-color font-semibold" />,
+                bold: <span className="text-slate-100 font-bold" />
+              }}
+            />
           </p>
-          <p className="primary-font-color">
-            {t("aboutMe.content.learningIntro")}
-            <span className="no-wrap primary-font-color">
-              <QualificationTooltip label="Inf.02" tooltipText={tooltipText1} />
-              <span className="primary-font-color">, i </span>
-              <QualificationTooltip label="Inf.03" tooltipText={tooltipText2} />
-              <span className="primary-font-color">, i </span>
-              <QualificationTooltip label="Inf.04" tooltipText={tooltipText3} />
-              <span className="primary-font-color">.</span>
-            </span>
-          </p>
+
+          <div className="space-y-3">
+            <p className="primary-font-color text-lg leading-relaxed">
+              <Trans
+                i18nKey="aboutMe.paragraph2"
+                components={{
+                  bold: <span className="text-slate-100 font-semibold" />,
+                  sector: <span className="qualification primary-font-color" />
+                }}
+              />
+            </p>
+
+            <p className="primary-font-color text-lg leading-relaxed">
+              {t("aboutMe.paragraph3")}
+            </p>
+          </div>
         </div>
 
         <div className="picture-section">

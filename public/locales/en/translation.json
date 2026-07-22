@@ -134,18 +134,11 @@
     }
   },
   "aboutMe": {
-    "content": {
-      "qualificationInf02": "Administration and operation of computer systems, peripheral devices, and local computer networks.",
-      "qualificationInf03": "Creating and administering websites, web applications, and databases.",
-      "qualificationInf04": "Designing, programming, and testing applications.",
-      "myNameIs": "My name is ",
-      "iAm": "I am ",
-      "jobTitle": "a Software Technician",
-      "and": "and ",
-      "secondaryRole": "an IT Technician",
-      "learningIntro": "I have been learning programming since 2020. I graduated from high school. During my education, I obtained the following qualifications: ",
-      "mySkills": "My skills"
-    }
+    "title": "About Me",
+    "name": "My name is <accent>Dawid Uniowski</accent>",
+    "paragraph1": "I am a <accent>Fullstack Developer</accent> with <bold>1.5 years</bold> of commercial experience in international and internal projects. I've been coding for <bold>5 years</bold>.",
+    "paragraph2": "I specialize in building <bold>web and mobile applications</bold>. Working at a software house, I delivered projects for sectors like <sector>BioTech</sector>, <sector>MedTech</sector> and <sector>FinTech</sector>",
+    "paragraph3": "Collaborating directly with clients throughout the entire software development lifecycle."
   },
   "contact": {
     "content": {
